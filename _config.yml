@@ -79,17 +79,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
+  type: git
   repo: git@github.com-hargao:hargao/hargao.github.io.git
   branch: master
   name: hargao
   email: flying.hargao@gmail.com
-- type: git
-  repo: git@github.com-hargao:hargao/hargao.github.io.git
-  branch: src
-  name: hargao
-  email: flying.hargao@gmail.com
-  extend_dirs: /
-  ignore_hidden: false
-  ignore_pattern:
-      public: .
+
