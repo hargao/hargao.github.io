@@ -356,7 +356,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-31 01:39:30" itemprop="dateModified" datetime="2018-05-31T01:39:30+08:00">2018-05-31</time>
+                <time title="修改时间：2018-05-31 02:10:32" itemprop="dateModified" datetime="2018-05-31T02:10:32+08:00">2018-05-31</time>
               
             
           </span>
@@ -557,7 +557,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-31 01:58:04" itemprop="dateModified" datetime="2018-05-31T01:58:04+08:00">2018-05-31</time>
+                <time title="修改时间：2018-05-31 02:20:30" itemprop="dateModified" datetime="2018-05-31T02:20:30+08:00">2018-05-31</time>
               
             
           </span>
@@ -620,7 +620,7 @@
       
         
           
-            <p>本文测试环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
+            <p>本文测试环境：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
 <p>起因是修改服务器 <code>/etc/hostname</code> 和 <code>/etc/hosts</code></p>
 <p>同事坚持 A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.1.1 &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
 <p>而我试了一下 B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
@@ -634,6 +634,208 @@
 <p>127.0.0.1 和 127.0.1.1 都属于 127.0.0.0/8  loopback地址， 本质没有区别。 和127.255.255.254 也没区别。</p>
 <p>结论是，如果你需要一个单独的入口， 又没有真实的固定IP， 那就用A。 至于为什么默认A， 因为 GNOME.<br>如果有固定ip, <code>127.0.1.1</code> 替换成固定ip, 结束</p>
 <p>同时也兼容各种getfqdn()不会get到localhost, <a href="https://onebitbug.me/2014/06/25/settings-fqdn-in-linux/" target="_blank" rel="noopener">这里</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2017/03/02/SSLError/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hargao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hargao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/02/SSLError/" itemprop="url">
+                  SSLError
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-03-02 22:55:00" itemprop="dateCreated datePublished" datetime="2017-03-02T22:55:00+08:00">2017-03-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-31 02:20:41" itemprop="dateModified" datetime="2018-05-31T02:20:41+08:00">2018-05-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/走在写码的路上/" itemprop="url" rel="index"><span itemprop="name">走在写码的路上</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/02/SSLError/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/02/SSLError/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>不敢说自己懂了，记录遇到的问题和解决</p>
+<p>接入华为推送遇到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SSLError(SSLError(&quot;bad handshake: Error([(&apos;SSL routines&apos;, SSL3_GET_SERVER_CERTIFICATE&apos;, &apos;certificate verify failed&apos;)],)&quot;,),)`</span><br></pre></td></tr></table></figure>
+<p>确定对方的证书没有问题， 所以问题定位在服务器的证书链上</p>
+<p>最偷懒的办法当然是 <code>verify=False</code> 啦， 但是基本操守还是要有的</p>
+<h3 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -connect <span class="string">'login.vmall.com:443'</span> -showcerts</span><br><span class="line"></span><br><span class="line">SSL-Session:</span><br><span class="line">  ....</span><br><span class="line">  Verify <span class="built_in">return</span> code: 20 (unable to get <span class="built_in">local</span> issuer certificate)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -CApath /etc/ssl/certs/ -connect &apos;login.vmall.com:443&apos; -showcerts</span><br><span class="line"></span><br><span class="line">SSL-Session:</span><br><span class="line">  ....</span><br><span class="line">  Verify return code: 0 (ok)</span><br></pre></td></tr></table></figure>
+<p>伟大的StackOverflows说， openssl 不默认信任任何证书， 需要由用户指定, 这就是不默认<code>/etc/ssl/certs/</code>为<code>CApath</code>的原因</p>
+<h3 id="解决方法-0-1"><a href="#解决方法-0-1" class="headerlink" title="解决方法 0.1"></a>解决方法 0.1</h3><p>既然认为是CApath的原因， 那就显式的 <code>requests.post(.., verify=&quot;/etc/ssl/certs/&quot;)</code>, stage 环境测试通过， 奔走相告</p>
+<h3 id="高兴的太早了"><a href="#高兴的太早了" class="headerlink" title="高兴的太早了"></a>高兴的太早了</h3><p>上prod后，集中报 <code>CA directories not supported in older Pythons</code>, requests和python版本明明是一样的</p>
+<h3 id="走头无路查阅文档"><a href="#走头无路查阅文档" class="headerlink" title="走头无路查阅文档"></a>走头无路查阅文档</h3><p>得到以下信息:</p>
+<blockquote>
+<ul>
+<li>python 2 (2.7.9 版本以下) 的 ssl 不安全, <a href="https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings" target="_blank" rel="noopener">看这里</a></li>
+<li><a href="https://urllib3.readthedocs.io/en/latest/user-guide.html#ssl-py2" target="_blank" rel="noopener">解决办法</a> 是配合pyopenssl食用</li>
+<li>如果安装了pyopenssl, <code>Requests</code> will then automatically inject pyopenssl into urllib3</li>
+<li>从 Requests 2.4.0 版之后，如果系统中装了 <code>certifi</code> 包，<code>Requests</code> 会试图使用它里边的证书</li>
+</ul>
+</blockquote>
+<p> 推测问题出在上面某个部分， 我相信这么常见的场景， requests不可能不支持。<br>那就重走一遍安装过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install requests[security]</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install libffi-dev libssl-dev</span><br></pre></td></tr></table></figure></p>
+<p>结论是是libssl-dev 没装好<br>也真是..坑</p>
+<hr>
+<p>真·END</p>
 
           
         
@@ -715,7 +917,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
