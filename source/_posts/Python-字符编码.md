@@ -7,13 +7,14 @@ tags:
 - Python
 ---
 
-
 ## Python 2.x
 
 ### Unicode
 
 即 unicode string: `u'\u6211\u662f\u8c01'`
 统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.
+
+<!-- more -->
 
 ### str
 

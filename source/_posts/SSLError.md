@@ -19,6 +19,7 @@ SSLError(SSLError("bad handshake: Error([('SSL routines', SSL3_GET_SERVER_CERTIF
 
 最偷懒的办法当然是 `verify=False` 啦， 但是基本操守还是要有的
 
+<!-- more -->
 
 ### openssl
 
