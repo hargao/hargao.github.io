@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Hargao&#39;s Blog">
 <meta property="og:description" content="StaleDataError 和 ObjectDeletedError 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。 ObjectDeletedError文档 A refresh operation failed to retrieve the database row corresponding to an object’s known primary key">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T19:41:33.920Z">
+<meta property="og:updated_time" content="2018-05-30T19:44:54.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQLAlchemy 在生产中遇到的问题">
 <meta name="twitter:description" content="StaleDataError 和 ObjectDeletedError 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。 ObjectDeletedError文档 A refresh operation failed to retrieve the database row corresponding to an object’s known primary key">
@@ -426,6 +426,7 @@
 </a> is used to retrieve an object which is, upon retrieval, detected as expired. A SELECT is emitted for the target row based on primary key; if no row is returned, this exception is raised.<br>The true meaning of this exception is simply that no row exists for the primary key identifier associated with a persistent object. The row may have been deleted, or in some cases the primary key updated to a new value, outside of the ORM’s management of the target object.</p>
 </blockquote>
 <p>其实说的很清楚, <strong>A SELECT is emitted for the target row based on primary key; if no row is returned, this exception is raised.</strong> 但是在成功复现之前就是没get到点， 也有被名字<code>Deleted</code>误导了的原因。</p>
+<a id="more"></a>
 <h4 id="重现"><a href="#重现" class="headerlink" title="重现"></a>重现</h4><ol>
 <li>session A 里拿到一个instance</li>
 <li><code>db.session.commit()</code> 使得instance在session A 过期</li>
