@@ -32,7 +32,7 @@ tags:
 
 str 有可能是 ascii, gbk, utf-8 等等中的任意一种。 具体是什么编码与 locale ，文件编码等等都有关系
 
-``` Python
+```python
 >>> "\x3cdiv\x3e".encode('ASCII')
 '<div>'
 
@@ -54,7 +54,7 @@ UnicodeEncodeError: 'ascii' codec can't encode character u'\u3002' in position 0
 告诉 python 编译器如何解码代码文件
 
 ### decode & encode
-    ``` Python
+    ```python
     >>> u'\u6211\u662f\u8c01'.encode('UTF-8')
     '\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81'
 
@@ -68,7 +68,7 @@ UnicodeEncodeError: 'ascii' codec can't encode character u'\u3002' in position 0
 
 Python 3.x 字符串默认 unicode, 3.x 的 str 就是 unicode
 
-``` Python
+```python
 >>> type('我是谁')
 <class 'str'>
 

@@ -7,7 +7,7 @@ tags:
 
 
 - https://github.com/Vankeservice/Gemini/blob/master/tests/views/conftest.py
-``` Python
+```python
 # -*- coding: utf-8 -*-
 
 import os
