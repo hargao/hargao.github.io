@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hargao&#39;s Blog">
-<meta property="og:url" content="https://hargao.github.io/index.html">
+  <meta name="description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储. str即 byte string: &amp;#39;\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81&amp;#39;  ASCII一共规定了128个字符的编">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 字符编码">
+<meta property="og:url" content="https://hargao.github.io/2017/04/16/Python-字符编码/index.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
+<meta property="og:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储. str即 byte string: &amp;#39;\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81&amp;#39;  ASCII一共规定了128个字符的编">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-30T17:39:30.316Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hargao&#39;s Blog">
+<meta name="twitter:title" content="Python 字符编码">
+<meta name="twitter:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储. str即 byte string: &amp;#39;\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81&amp;#39;  ASCII一共规定了128个字符的编">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.github.io/"/>
+  <link rel="canonical" href="https://hargao.github.io/2017/04/16/Python-字符编码/"/>
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>Hargao's Blog</title>
+  <title>Python 字符编码 | Hargao's Blog</title>
   
 
 
@@ -178,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +220,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -276,9 +280,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -310,11 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/16/Python-字符编码/" itemprop="url">
-                  Python 字符编码
-                </a>
+          <h1 class="post-title" itemprop="name headline">Python 字符编码
               
             
           </h1>
@@ -417,9 +417,7 @@
       
 
       
-        
-          
-            <h2 id="Python-2-x"><a href="#Python-2-x" class="headerlink" title="Python 2.x"></a>Python 2.x</h2><h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p>即 unicode string: <code>u&#39;\u6211\u662f\u8c01&#39;</code><br>统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.</p>
+        <h2 id="Python-2-x"><a href="#Python-2-x" class="headerlink" title="Python 2.x"></a>Python 2.x</h2><h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p>即 unicode string: <code>u&#39;\u6211\u662f\u8c01&#39;</code><br>统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.</p>
 <h3 id="str"><a href="#str" class="headerlink" title="str"></a>str</h3><p>即 byte string: <code>&#39;\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81&#39;</code></p>
 <ul>
 <li><p>ASCII<br>一共规定了128个字符的编码, 只支持英文, 与 unicode 无关</p>
@@ -442,8 +440,6 @@
 <li><a href="https://segmentfault.com/q/1010000007215946" target="_blank" rel="noopener">https://segmentfault.com/q/1010000007215946</a></li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -461,207 +457,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2017/03/07/127-0-0-1-127-0-1-1和-localhost/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hargao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hargao's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/" itemprop="url">
-                  127.0.0.1, 127.0.1.1和 localhost
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-07 20:37:00" itemprop="dateCreated datePublished" datetime="2017-03-07T20:37:00+08:00">2017-03-07</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-05-31 01:50:37" itemprop="dateModified" datetime="2018-05-31T01:50:37+08:00">2018-05-31</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/走在写码的路上/" itemprop="url" rel="index"><span itemprop="name">走在写码的路上</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>本文测试环境：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
-<p>起因是修改服务器 <code>/etc/hostname</code> 和 <code>/etc/hosts</code></p>
-<p>同事坚持 A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.1.1 &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>而我试了一下 B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>明明也是没有问题的嘛。 随手查<a href="http://www.debian.org/doc/manuals/debian-reference/ch05.en.html#_the_hostname_resolution" target="_blank" rel="noopener">文档</a>。 注意这两句</p>
-<blockquote>
-<p>The IP address 127.0.1.1 in the second line of this example may not be found on some other Unix-like systems. The <a href="http://en.wikipedia.org/wiki/Debian-Installer" target="_blank" rel="noopener">Debian Installer</a> creates this entry for a system without a permanent IP address as a <strong><em>workaround</em></strong> for some software (e.g., GNOME) as documented in the <a href="http://bugs.debian.org/719621" target="_blank" rel="noopener">bug #719621</a>.</p>
-</blockquote>
-<blockquote>
-<p>For a system with a permanent IP address, that permanent IP address should be used here instead of 127.0.1.1.</p>
-</blockquote>
-<p>127.0.0.1 和 127.0.1.1 都属于 127.0.0.0/8  loopback地址， 本质没有区别。 和127.255.255.254 也没区别。</p>
-<p>A 和 B 的区别就是， 如果你需要一个单独的入口， 又没有真实的固定IP， 那就用A。 至于为什么默认A， 因为 GNOME.</p>
-<p>同时也兼容各种getfqdn()不会get到localhost, <a href="https://onebitbug.me/2014/06/25/settings-fqdn-in-linux/" target="_blank" rel="noopener">这里</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/" rel="next" title="127.0.0.1, 127.0.1.1和 localhost">
+                <i class="fa fa-chevron-left"></i> 127.0.0.1, 127.0.1.1和 localhost
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -671,14 +496,22 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -699,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -787,6 +629,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-x"><span class="nav-number">1.</span> <span class="nav-text">Python 2.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unicode"><span class="nav-number">1.1.</span> <span class="nav-text">Unicode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str"><span class="nav-number">1.2.</span> <span class="nav-text">str</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.3.</span> <span class="nav-text"># -*-coding:utf-8 -*-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-amp-encode"><span class="nav-number">1.4.</span> <span class="nav-text">decode &amp; encode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-3-x"><span class="nav-number">2.</span> <span class="nav-text">Python 3.x</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -921,6 +779,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
