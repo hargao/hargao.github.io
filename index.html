@@ -301,6 +301,189 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hargao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hargao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" itemprop="url">
+                  Pipenv: should Pipfile.lock be committed to version control?
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-03-15 00:15:04" itemprop="dateCreated datePublished" datetime="2018-03-15T00:15:04+08:00">2018-03-15</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/走在写码的路上/" itemprop="url" rel="index"><span itemprop="name">走在写码的路上</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" class="leancloud_visitors" data-flag-title="Pipenv: should Pipfile.lock be committed to version control?">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>Generally, yes you should commit it to version control.<br>Especially for applications. For libraries, less so.</p>
+<p>– kennethreitz</p>
+</blockquote>
+<p>毕竟这是一个 deployment tool</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2017/05/01/SQLAlchemy-在生产中遇到的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -422,7 +605,7 @@
       
         
           <p><code>StaleDataError</code> 和 <code>ObjectDeletedError</code> 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。</p>
-<h3 id="ObjectDeletedError"><a href="#ObjectDeletedError" class="headerlink" title="ObjectDeletedError"></a>ObjectDeletedError</h3><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><blockquote>
+<h2 id="ObjectDeletedError"><a href="#ObjectDeletedError" class="headerlink" title="ObjectDeletedError"></a>ObjectDeletedError</h2><h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><blockquote>
 <p>A refresh operation failed to retrieve the database row corresponding to an object’s known primary key identity.<br>A refresh operation proceeds when an expired attribute is accessed on an object, or when <a href="http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.get" target="_blank" rel="noopener">Query.get()
 </a> is used to retrieve an object which is, upon retrieval, detected as expired. A SELECT is emitted for the target row based on primary key; if no row is returned, this exception is raised.<br>The true meaning of this exception is simply that no row exists for the primary key identifier associated with a persistent object. The row may have been deleted, or in some cases the primary key updated to a new value, outside of the ORM’s management of the target object.</p>
 </blockquote>
@@ -1241,7 +1424,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
