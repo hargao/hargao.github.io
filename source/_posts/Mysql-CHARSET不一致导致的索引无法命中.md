@@ -1,7 +1,10 @@
 ---
-title: 'Mysql: CHARSET不一致导致索引无法命中'
+title: 'Mysql: CHARSET不一致导致的索引无法命中'
 date: 2017-02-07 21:17:40
+categories:
+- 走在写码的路上
 tags:
+- 数据库
 ---
 
 ### 原始需求描述
@@ -77,14 +80,14 @@ EXPLAIN 出来， 主表变了(又， 排序麻烦在主表上做)
 找不同发现， 两个表 `CHARSET` 不同， 分别是 `utf8mb4` 和 `utf8`
 两个字段 `TYPE` 也不同， `VARCHAR(32)` 和 `VARCHAR(64)`
 实践证明， 两列都改成`utf8mb4`以后， 就好了，好了， 好了.....
-人生无处不是坑, 下回就懂了, 嗯
-`TYPE` 长度不影响， 顺手改了吧
+`TYPE` 长度不影响， 顺手改了
 
-还是 EXPLAIN
+还是 EXPLAIN:
 {% asset_img explain-4.png explain4 %}
 
-终于长得像样了些
-**taking 1.5ms**
+Bingo
+
+run 一下 **taking 1.5ms**
 
 既然这么快， 问题 2 就没有必要了
 
