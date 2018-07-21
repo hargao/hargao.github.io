@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="Hargao&#39;s Blog">
 <meta property="og:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T18:24:31.002Z">
+<meta property="og:updated_time" content="2018-07-19T03:29:08.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 字符编码">
 <meta name="twitter:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.">
@@ -438,6 +438,9 @@
 </code></pre><h2 id="Python-3-x"><a href="#Python-3-x" class="headerlink" title="Python 3.x"></a>Python 3.x</h2><p>记住用flask的时候, Everything from body is byte</p>
 <p>Python 3.x 字符串默认 unicode, 3.x 的 str 就是 unicode</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="string">'我是谁'</span>)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">&gt;&gt;&gt; '我是谁'.<span class="title">encode</span><span class="params">(<span class="string">'utf-8'</span>)</span></span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xe6</span>\<span class="title">x88</span>\<span class="title">x91</span>\<span class="title">xe6</span>\<span class="title">x98</span>\<span class="title">xaf</span>\<span class="title">xe8</span>\<span class="title">xb0</span>\<span class="title">x81</span>'</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; '我是谁'.<span class="title">encode</span><span class="params">(<span class="string">'gbk'</span>)</span></span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xce</span>\<span class="title">xd2</span>\<span class="title">xca</span>\<span class="title">xc7</span>\<span class="title">xcb</span>\<span class="title">xad</span>'</span></span><br></pre></td></tr></table></figure>
+<h2 id="关于-sys-setdefaultencoding-‘utf-8’"><a href="#关于-sys-setdefaultencoding-‘utf-8’" class="headerlink" title="关于 sys.setdefaultencoding(‘utf-8’)"></a>关于 sys.setdefaultencoding(‘utf-8’)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'我'</span> == <span class="string">'我'</span></span><br><span class="line">__main__:<span class="number">1</span>: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them <span class="keyword">as</span> being unequal</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sys</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reload(sys)</span><br><span class="line">&lt;module <span class="string">'sys'</span> (built-<span class="keyword">in</span>)&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.setdefaultencoding(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'我'</span> == <span class="string">'我'</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="关于-unicode-literals"><a href="#关于-unicode-literals" class="headerlink" title="关于 unicode_literals"></a>关于 unicode_literals</h2><p>为什么pocoo不建议用</p>
+<p>TODO</p>
 <hr>
 <p>References:</p>
 <ul>
@@ -565,7 +568,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -601,7 +604,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -651,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-x"><span class="nav-number">1.</span> <span class="nav-text">Python 2.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unicode"><span class="nav-number">1.1.</span> <span class="nav-text">Unicode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str"><span class="nav-number">1.2.</span> <span class="nav-text">str</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.3.</span> <span class="nav-text"># -*-coding:utf-8 -*-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-amp-encode"><span class="nav-number">1.4.</span> <span class="nav-text">decode &amp; encode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-3-x"><span class="nav-number">2.</span> <span class="nav-text">Python 3.x</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-x"><span class="nav-number">1.</span> <span class="nav-text">Python 2.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unicode"><span class="nav-number">1.1.</span> <span class="nav-text">Unicode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str"><span class="nav-number">1.2.</span> <span class="nav-text">str</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.3.</span> <span class="nav-text"># -*-coding:utf-8 -*-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-amp-encode"><span class="nav-number">1.4.</span> <span class="nav-text">decode &amp; encode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-3-x"><span class="nav-number">2.</span> <span class="nav-text">Python 3.x</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-sys-setdefaultencoding-‘utf-8’"><span class="nav-number">3.</span> <span class="nav-text">关于 sys.setdefaultencoding(‘utf-8’)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-unicode-literals"><span class="nav-number">4.</span> <span class="nav-text">关于 unicode_literals</span></a></li></ol></div>
             
 
           </div>
