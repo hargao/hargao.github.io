@@ -2,7 +2,7 @@
 title: Ubuntu下使用update-alternatives管理版本
 date: 2018-07-09 11:16:57
 categories:
-- 假装是个DevOps
+- 工具
 tags:
 - Python
 ---
