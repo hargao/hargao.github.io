@@ -15,7 +15,7 @@ tags:
 
 ## 背景
 
-引擎: hexo
+博客引擎: hexo
 主题: next
 
 ## 动手
