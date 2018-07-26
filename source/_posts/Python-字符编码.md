@@ -117,7 +117,6 @@ UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 0: ordinal 
 >>> sys.setdefaultencoding('utf-8')
 >>> unicode('我')
 u'\u6211'
->>>
 ```
 
 ### sys.setdefaultencoding 到底做了什么
@@ -128,7 +127,7 @@ u'\u6211'
 >
 >Set the current default string encoding used by the Unicode implementation. This function is only intended to be used by the site module implementation and, where needed, by sitecustomize. Once used by the site module, it is removed from the sys module’s namespace.
 
-### 会造成的问题
+### 会造成什么问题, 为什么不能用
 
 >  utf-8 encoded byte strings were mixed with unicode text strings
 
