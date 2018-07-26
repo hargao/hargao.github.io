@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="背景wormhole: 跳板机别名, 在 config 中已配置好域名、端口、用户名和私钥; 又称为”代理”, “SSH Server”10.0.70.20: 内网服务器ip. 又称为”远程主机”.10.0.70.21: 内网数据库ip, 也是个”远程主机”hargao: 用户名. 在跳板机和内网机器上都可以通过私钥登录 概念12SSH Agent Forwarding: SSH Agent 转发">
-<meta name="keywords" content="SSH">
+  <meta name="description" content="StaleDataError 和 ObjectDeletedError 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。 ObjectDeletedError文档 A refresh operation failed to retrieve the database row corresponding to an object’s known primary key">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSH端口转发">
-<meta property="og:url" content="https://hargao.github.io/2018/04/21/SSH端口转发/index.html">
+<meta property="og:title" content="SQLAlchemy 在生产中遇到的问题">
+<meta property="og:url" content="https://hargao.top/2017/05/01/sqlalchemy-error.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="背景wormhole: 跳板机别名, 在 config 中已配置好域名、端口、用户名和私钥; 又称为”代理”, “SSH Server”10.0.70.20: 内网服务器ip. 又称为”远程主机”.10.0.70.21: 内网数据库ip, 也是个”远程主机”hargao: 用户名. 在跳板机和内网机器上都可以通过私钥登录 概念12SSH Agent Forwarding: SSH Agent 转发">
+<meta property="og:description" content="StaleDataError 和 ObjectDeletedError 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。 ObjectDeletedError文档 A refresh operation failed to retrieve the database row corresponding to an object’s known primary key">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-22T16:29:14.055Z">
+<meta property="og:updated_time" content="2018-06-01T18:52:46.791Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSH端口转发">
-<meta name="twitter:description" content="背景wormhole: 跳板机别名, 在 config 中已配置好域名、端口、用户名和私钥; 又称为”代理”, “SSH Server”10.0.70.20: 内网服务器ip. 又称为”远程主机”.10.0.70.21: 内网数据库ip, 也是个”远程主机”hargao: 用户名. 在跳板机和内网机器上都可以通过私钥登录 概念12SSH Agent Forwarding: SSH Agent 转发">
+<meta name="twitter:title" content="SQLAlchemy 在生产中遇到的问题">
+<meta name="twitter:description" content="StaleDataError 和 ObjectDeletedError 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。 ObjectDeletedError文档 A refresh operation failed to retrieve the database row corresponding to an object’s known primary key">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.github.io/2018/04/21/SSH端口转发/"/>
+  <link rel="canonical" href="https://hargao.top/2017/05/01/sqlalchemy-error.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>SSH端口转发 | Hargao's Blog</title>
+  <title>SQLAlchemy 在生产中遇到的问题 | Hargao's Blog</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2018/04/21/SSH端口转发/">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2017/05/01/sqlalchemy-error.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SSH端口转发
+          <h1 class="post-title" itemprop="name headline">SQLAlchemy 在生产中遇到的问题
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-04-21 10:20:51" itemprop="dateCreated datePublished" datetime="2018-04-21T10:20:51+08:00">2018-04-21</time>
+              <time title="创建时间：2017-05-01 20:31:34" itemprop="dateCreated datePublished" datetime="2017-05-01T20:31:34+08:00">2017-05-01</time>
             
 
             
@@ -365,7 +365,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/走在写码的路上/" itemprop="url" rel="index"><span itemprop="name">走在写码的路上</span></a></span>
 
                 
                 
@@ -380,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/21/SSH端口转发/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/21/SSH端口转发/" itemprop="commentCount"></span>
+                <a href="/2017/05/01/sqlalchemy-error.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/05/01/sqlalchemy-error.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,7 +389,7 @@
 
           
           
-             <span id="/2018/04/21/SSH端口转发/" class="leancloud_visitors" data-flag-title="SSH端口转发">
+             <span id="/2017/05/01/sqlalchemy-error.html" class="leancloud_visitors" data-flag-title="SQLAlchemy 在生产中遇到的问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,33 +420,47 @@
       
 
       
-        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><code>wormhole</code>: 跳板机别名, 在 config 中已配置好域名、端口、用户名和私钥; 又称为”代理”, “SSH Server”<br><code>10.0.70.20</code>: 内网服务器ip. 又称为”远程主机”.<br><code>10.0.70.21</code>: 内网数据库ip, 也是个”远程主机”<br><code>hargao</code>: 用户名. 在跳板机和内网机器上都可以通过私钥登录</p>
-<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSH Agent Forwarding: SSH Agent 转发</span><br><span class="line">Local Forward: 本地转发</span><br></pre></td></tr></table></figure>
+        <p><code>StaleDataError</code> 和 <code>ObjectDeletedError</code> 这两个错误上了生产以后大量出现, 本质上差不多。抛出的异常里没有其他有用信息。</p>
+<h2 id="ObjectDeletedError"><a href="#ObjectDeletedError" class="headerlink" title="ObjectDeletedError"></a>ObjectDeletedError</h2><h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><blockquote>
+<p>A refresh operation failed to retrieve the database row corresponding to an object’s known primary key identity.<br>A refresh operation proceeds when an expired attribute is accessed on an object, or when <a href="http://docs.sqlalchemy.org/en/latest/orm/query.html#sqlalchemy.orm.query.Query.get" target="_blank" rel="noopener">Query.get()
+</a> is used to retrieve an object which is, upon retrieval, detected as expired. A SELECT is emitted for the target row based on primary key; if no row is returned, this exception is raised.<br>The true meaning of this exception is simply that no row exists for the primary key identifier associated with a persistent object. The row may have been deleted, or in some cases the primary key updated to a new value, outside of the ORM’s management of the target object.</p>
+</blockquote>
+<p>其实说的很清楚, <strong>A SELECT is emitted for the target row based on primary key; if no row is returned, this exception is raised.</strong> 但是在成功复现之前就是没get到点， 也有被名字<code>Deleted</code>误导了的原因。</p>
 <a id="more"></a>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-p ssh 端口, 根据实际情况设置. 不多废话. 默认22</span><br><span class="line"></span><br><span class="line">-T 禁止为ssh分配伪终端</span><br><span class="line">-t 强制分配伪终端, 重复使用该选项&quot;-tt&quot;将进一步强制. &quot;伪终端的标准输入输出都是管道&quot;, 没有理解,</span><br><span class="line">转发时不强制分配会提示`Pseudo-terminal will not be allocated because stdin is not a terminal`,</span><br><span class="line">并且不能在终端输入</span><br><span class="line"></span><br><span class="line">-a 禁止转发认证代理的连接.</span><br><span class="line">-A 允许转发认证代理的连接. 可以在配置文件中对每个主机单独设定这个参数.</span><br><span class="line"></span><br><span class="line">-D 指定一个本地机器 “动态的” 应用程序端口转发. 本地机器上分配一个 socket 侦听端口, 转发这个端口的所有连接至跳板机</span><br><span class="line"></span><br><span class="line">-f fork 进程去后台执行</span><br><span class="line"></span><br><span class="line">-N 声明不执行远程命令. 仅用于转发端口</span><br><span class="line"></span><br><span class="line">-g 允许远端主机连接本地转发的端口.&quot;告诉SSH客户端，这个GatewayPorts=yes。即开启端口转发&quot;. 但我还是不懂</span><br><span class="line"></span><br><span class="line">-L 将本地端口转发到远程主机的端口</span><br><span class="line">-R 将远程主机端口转发到本地的指定端口</span><br></pre></td></tr></table></figure>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
-<li><p>通过跳板机进入内网服务器</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -A -t wormhole ssh hargao@10.0.70.20</span><br></pre></td></tr></table></figure>
-<p> 分析: SSH支持执行shell</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">%</span> ssh wormhole ls                                                                                                                                                                         ~</span><br><span class="line">test.txt</span><br></pre></td></tr></table></figure>
-<p> 所以实际上是在wormhole服务器上执行 <code>ssh hargao@10.0.70.20</code><br> -t 分配伪终端。 -A 解决代理转发,使用本机的密钥认证远程主机, 而不是当执行ssh到远程主机时在代理服务器上寻找hargao账户的密钥</p>
-</li>
-<li><p>本地流量转发至跳板机, 访问内网服务</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -D 18080 wormhole</span><br></pre></td></tr></table></figure>
-<p> 18080端口上的所有流量转发至wormhole. 用来配合 Proxy SwitchyOmega 访问内网服务</p>
-</li>
-<li><p>本地访问内网数据库/有ip白名单限制的数据库</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 都是后台运行将10.0.70.21:3306通过wormhole转发至本地3306端口.</span><br><span class="line">ssh -f wormhole -L 3306:10.0.70.21:3306 -N</span><br><span class="line">ssh -gNfL 3307:10.0.70.21:3306 wormhole</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 但我更喜欢这样子, 前台运行, 可以执行命令, 方便管理</span><br><span class="line">ssh -L 3307:10.0.70.21:3306 wormhole</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 连接数据库</span><br><span class="line">mysql -h 127.0.0.1 -P 3307</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>远程转发</p>
-<p> “我”是内网的一台服务器(“10.0.70.20”). 我能访问内网数据库、能访问外网但是没有外网ip<br> 有一个外网用户(host1), 想访问内网数据库(“10.0.70.21:3306”, host2). 但是无法主动发起连接至”10.0.70.20”<br> 我主动发起一个隧道， 让外网用户能访问内网数据库</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh -R 3307:10.0.70.21:3306 host1</span><br><span class="line">ssh -NfR 3307:10.0.70.21:3306 host1</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 此时在host1上</span><br><span class="line">mysql 127.0.0.1 -P 3307</span><br></pre></td></tr></table></figure>
-<p> 好吧我没有使用场景, 没用过</p>
-</li>
+<h3 id="重现"><a href="#重现" class="headerlink" title="重现"></a>重现</h3><ol>
+<li>session A 里拿到一个instance</li>
+<li><code>db.session.commit()</code> 使得instance在session A 过期</li>
+<li>在另一个 session 删掉 instance 这一条数据</li>
+<li>回到 session A, <code>print instance.id</code></li>
 </ol>
-<h3 id="SSH-config"><a href="#SSH-config" class="headerlink" title="SSH config"></a>SSH config</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 设置别名</span><br><span class="line">Host wormhole</span><br><span class="line">    HostName 10.0.70.1</span><br><span class="line">    Port 22</span><br><span class="line">    User hargao</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_hargao</span><br><span class="line"></span><br><span class="line"># 设置本地转发, 场景3</span><br><span class="line">Host  db</span><br><span class="line">    HostName     wormhole 的 HostName</span><br><span class="line">    Port         wormhole 的 Port</span><br><span class="line">    User         wormhole 的 User</span><br><span class="line">    LocalForward 3307 10.0.70.21:3306</span><br></pre></td></tr></table></figure>
-<hr>
-<p>References:<br><a href="https://manpages.debian.org/stretch/manpages-zh/ssh.1.zh_CN.html" target="_blank" rel="noopener">Debian man page</a><br><a href="https://blog.csdn.net/yeyichao/article/details/51154312" target="_blank" rel="noopener">老戚的黑科技之SSH隧道技术</a></p>
+<h3 id="生产上的解释"><a href="#生产上的解释" class="headerlink" title="生产上的解释"></a>生产上的解释</h3><p>回到生产上，根本原因是主从延迟问题<br>我们用 Proxy 实现读写分离<br>往主库写入后session commit, instance 过期， 去从库读不到，于是异常。</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol>
+<li>选项1是修改 expire_on_commit， 使得commit之后不过期， 但是， 心理上觉得不靠谱</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db = SQLAlchemy(session_options=&#123;<span class="string">'expire_on_commit'</span>: <span class="keyword">False</span>&#125;)</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>拿到 identity</li>
+</ol>
+<blockquote>
+<p>A refresh operation failed to retrieve the database row corresponding to an object’s known primary key identity.</p>
+</blockquote>
+<p>大部分情况下我们需要的就是这个identity(所有表都有一列<code>id</code>作为 primary key)，dir 一下， 能找到<code>_sa_instance_state</code>, 或者</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> inspect</span><br><span class="line">inspect(instance).identity</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>合理的做法是指定走master</li>
+</ol>
+<p>方案2反直觉, 但确实没有更快的办法</p>
+<h2 id="StaleDataError"><a href="#StaleDataError" class="headerlink" title="StaleDataError"></a>StaleDataError</h2><p>错误信息, 也是发生在commit的时候.</p>
+<blockquote>
+<p>StaleDataError: sqlalchemy.orm.persistence in _emit_update_statements<br>error<br>UPDATE statement on table ‘device’ expected to update 1 row(s); 0 were matched.</p>
+</blockquote>
+<p><a href="http://docs.sqlalchemy.org/en/latest/orm/exceptions.html#sqlalchemy.orm.exc.StaleDataError" target="_blank" rel="noopener">文档</a> 就不复制了<br>追一下 sqlalchemy.orm.persistence (赞一个sentry先)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if rows != len(records):</span><br><span class="line">    raise orm_exc.StaleDataError</span><br></pre></td></tr></table></figure></p>
+<p><code>records</code> 是前面传进来的要更新的数据,  <code>rows += c.rowcount</code>. c是connections.<br>本来想update 1 row， 但是被另一个进程捷足先登。 生产环境并发高的情况下才能重现。<br>查了celery的日志， 果然出错的task， 在相同时间有另一个参数相同uuid不同的task成功了。<br>怀疑过celery是不是重复出队， 又追了一下日志发现想多了， APP短时间重复请求了接口</p>
+<p>留下两个疑问:</p>
+<ol>
+<li>celery给task生成uuid是入队还是出队的时候</li>
+<li>生成随机数不现实的情况下， 怎么避免客户端重复提交带来的影响</li>
+</ol>
 
       
     </div>
@@ -467,7 +481,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SSH/" rel="tag"># SSH</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -480,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" rel="next" title="Pipenv: should Pipfile.lock be committed to version control?">
-                <i class="fa fa-chevron-left"></i> Pipenv: should Pipfile.lock be committed to version control?
+              <a href="/2017/04/16/python-string.html" rel="next" title="Python 字符编码">
+                <i class="fa fa-chevron-left"></i> Python 字符编码
               </a>
             
           </div>
@@ -490,8 +504,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/09/Ubuntu下使用update-alternatives管理版本/" rel="prev" title="Ubuntu下使用update-alternatives管理版本">
-                Ubuntu下使用update-alternatives管理版本 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/15/pipfile-lock-version-control.html" rel="prev" title="Pipenv: should Pipfile.lock be committed to version control?">
+                Pipenv: should Pipfile.lock be committed to version control? <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -663,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数"><span class="nav-number">3.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">4.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSH-config"><span class="nav-number">5.</span> <span class="nav-text">SSH config</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ObjectDeletedError"><span class="nav-number">1.</span> <span class="nav-text">ObjectDeletedError</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文档"><span class="nav-number">1.1.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重现"><span class="nav-number">1.2.</span> <span class="nav-text">重现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生产上的解释"><span class="nav-number">1.3.</span> <span class="nav-text">生产上的解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.4.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StaleDataError"><span class="nav-number">2.</span> <span class="nav-text">StaleDataError</span></a></li></ol></div>
             
 
           </div>

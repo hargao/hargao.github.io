@@ -108,25 +108,30 @@
 
 
 
-  <meta name="description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
-<meta name="keywords" content="假装是个DevOps">
+  <meta name="description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="127.0.0.1, 127.0.1.1和 localhost">
-<meta property="og:url" content="https://hargao.github.io/2017/03/07/127-0-0-1-127-0-1-1和-localhost/index.html">
+<meta property="og:title" content="Mysql: CHARSET不一致导致的索引无法命中">
+<meta property="og:url" content="https://hargao.top/2017/02/07/mysql-index-not-used.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
+<meta property="og:description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T19:15:08.080Z">
+<meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-1.png">
+<meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-2.png">
+<meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-3.png">
+<meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-4.png">
+<meta property="og:updated_time" content="2018-06-06T13:54:18.806Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="127.0.0.1, 127.0.1.1和 localhost">
-<meta name="twitter:description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
+<meta name="twitter:title" content="Mysql: CHARSET不一致导致的索引无法命中">
+<meta name="twitter:description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
+<meta name="twitter:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.github.io/2017/03/07/127-0-0-1-127-0-1-1和-localhost/"/>
+  <link rel="canonical" href="https://hargao.top/2017/02/07/mysql-index-not-used.html"/>
 
 
 
@@ -136,7 +141,7 @@
   };
 </script>
 
-  <title>127.0.0.1, 127.0.1.1和 localhost | Hargao's Blog</title>
+  <title>Mysql: CHARSET不一致导致的索引无法命中 | Hargao's Blog</title>
   
 
 
@@ -305,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2017/03/07/127-0-0-1-127-0-1-1和-localhost/">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2017/02/07/mysql-index-not-used.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -322,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">127.0.0.1, 127.0.1.1和 localhost
+          <h1 class="post-title" itemprop="name headline">Mysql: CHARSET不一致导致的索引无法命中
               
             
           </h1>
@@ -347,7 +352,7 @@
                 
               
 
-              <time title="创建时间：2017-03-07 20:37:00" itemprop="dateCreated datePublished" datetime="2017-03-07T20:37:00+08:00">2017-03-07</time>
+              <time title="创建时间：2017-02-07 21:17:40" itemprop="dateCreated datePublished" datetime="2017-02-07T21:17:40+08:00">2017-02-07</time>
             
 
             
@@ -380,8 +385,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/" itemprop="commentCount"></span>
+                <a href="/2017/02/07/mysql-index-not-used.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/02/07/mysql-index-not-used.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,7 +394,7 @@
 
           
           
-             <span id="/2017/03/07/127-0-0-1-127-0-1-1和-localhost/" class="leancloud_visitors" data-flag-title="127.0.0.1, 127.0.1.1和 localhost">
+             <span id="/2017/02/07/mysql-index-not-used.html" class="leancloud_visitors" data-flag-title="Mysql: CHARSET不一致导致的索引无法命中">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,21 +425,74 @@
       
 
       
-        <p>本文测试环境：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
-<p>起因是修改服务器 <code>/etc/hostname</code> 和 <code>/etc/hosts</code></p>
-<p>同事坚持 A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.1.1 &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>而我试了一下 B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
+        <h3 id="原始需求描述"><a href="#原始需求描述" class="headerlink" title="原始需求描述"></a>原始需求描述</h3><ul>
+<li>TABLE task,  200w rows</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>task_no</th>
+<th style="text-align:center">content</th>
+<th style="text-align:center">created</th>
+<th>house_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自增主键</td>
+<td>task编码，uni_key</td>
+<td style="text-align:center">内容</td>
+<td style="text-align:center">创建时间, datetime</td>
+<td>house.code, 无外键</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TABLE house, 160w rows</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th style="text-align:center">code</th>
+<th style="text-align:center">name</th>
+<th>created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>自增主键</td>
+<td style="text-align:center">house编码，uni_key, 有单列索引</td>
+<td style="text-align:center">名称</td>
+<td>删除状态， 单列索引</td>
+</tr>
+</tbody>
+</table>
+<p>运营要求导出一定时间段, 1万左右的task, 字段包括 task.content 和 house.name,没有 house_code 的保留 null, 半小时都没跑出来.</p>
 <a id="more"></a>
-<p>明明也是没有问题的嘛。 随手查<a href="http://www.debian.org/doc/manuals/debian-reference/ch05.en.html#_the_hostname_resolution" target="_blank" rel="noopener">文档</a>。 注意这两句</p>
-<blockquote>
-<p>The IP address 127.0.1.1 in the second line of this example may not be found on some other Unix-like systems. The <a href="http://en.wikipedia.org/wiki/Debian-Installer" target="_blank" rel="noopener">Debian Installer</a> creates this entry for a system without a permanent IP address as a <strong><em>workaround</em></strong> for some software (e.g., GNOME) as documented in the <a href="http://bugs.debian.org/719621" target="_blank" rel="noopener">bug #719621</a>.</p>
-</blockquote>
-<blockquote>
-<p>For a system with a permanent IP address, that permanent IP address should be used here instead of 127.0.1.1.</p>
-</blockquote>
-<p>127.0.0.1 和 127.0.1.1 都属于 127.0.0.0/8  loopback地址， 本质没有区别。 和127.255.255.254 也没区别。</p>
-<p>结论是，如果你需要一个单独的入口， 又没有真实的固定IP， 那就用A。 至于为什么默认A， 因为 GNOME.<br>如果有固定ip, <code>127.0.1.1</code> 替换成固定ip, 结束</p>
-<p>同时也兼容各种getfqdn()不会get到localhost, <a href="https://onebitbug.me/2014/06/25/settings-fqdn-in-linux/" target="_blank" rel="noopener">这里</a></p>
+<h3 id="SQL写的烂"><a href="#SQL写的烂" class="headerlink" title="SQL写的烂?"></a>SQL写的烂?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">LEFT JOIN house ON house.code = t.house_code AND house.deleted = 0</span><br><span class="line">WHERE t.id &gt;= 94210385 AND t.id &lt;= 94860373</span><br><span class="line">AND t.created &gt; &apos;2015-12-17&apos;AND t.created &lt; &apos;2015-01-11&apos;</span><br></pre></td></tr></table></figure>
+<p>explain 看看<br><img src="/2017/02/07/mysql-index-not-used/explain-1.png" title="explain1"></p>
+<p>id只起到缩减范围的作用, house.deleted 删掉对效率影响不大。<br>本来很简单的数据， 最后让运营等了三个小时, 还使用了迂回办法: 子查询， 把有 house_code 和 无 house_code 分开导出。<br>但是为什么, 这句SQL执行效率还不如写代码一行行 <code>select name from house where house_code=x</code>, 不能接受。</p>
+<h3 id="尝试理解"><a href="#尝试理解" class="headerlink" title="尝试理解"></a>尝试理解</h3><p>缩减范围, 6个task</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">LEFT JOIN house</span><br><span class="line">ON house.code = t.house_code</span><br><span class="line">WHERE t.id &gt;= 594210385 AND t.id &lt;= 594210390;</span><br></pre></td></tr></table></figure>
+<p>又 EXPLAIN<br><img src="/2017/02/07/mysql-index-not-used/explain-2.png" title="explain2"><br><strong>taking 3.02s</strong>, 服气</p>
+<p>现在有两个问题</p>
+<ol>
+<li>house.code 索引用不上。</li>
+<li>我们明确知道, house_code 在 house 最多只有一条, 找到一条就不需要继续了。</li>
+</ol>
+<p>补充一个问题, <code>LEFT JOIN</code> -&gt; <code>JOIN</code>, 即</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">JOIN house</span><br><span class="line">ON house.code = t.house_code</span><br><span class="line">WHERE t.id &gt;= 594210385 AND t.id &lt;= 594210390;</span><br></pre></td></tr></table></figure>
+<p>EXPLAIN 出来， 主表变了(又， 排序麻烦在主表上做)<br><img src="/2017/02/07/mysql-index-not-used/explain-3.png" title="explain3"></p>
+<p>除此之外， 效率几乎无差</p>
+<h3 id="索引为什么用不上"><a href="#索引为什么用不上" class="headerlink" title="索引为什么用不上"></a>索引为什么用不上</h3><p>找不同发现， 两个表 <code>CHARSET</code> 不同， 分别是 <code>utf8mb4</code> 和 <code>utf8</code><br>两个字段 <code>TYPE</code> 也不同， <code>VARCHAR(32)</code> 和 <code>VARCHAR(64)</code><br>实践证明， 两列都改成<code>utf8mb4</code>以后， 就好了，好了， 好了…..<br><code>TYPE</code> 长度不影响， 顺手改了</p>
+<p>还是 EXPLAIN:<br><img src="/2017/02/07/mysql-index-not-used/explain-4.png" title="explain4"></p>
+<p>Bingo</p>
+<p>run 一下 <strong>taking 1.5ms</strong></p>
+<p>既然这么快， 问题 2 就没有必要了</p>
+<h3 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h3><p><a href="http://stackoverflow.com/questions/18660252/mysql-why-does-left-join-not-use-an-index" target="_blank" rel="noopener">收工之前， 多谢这位大哥</a><br>刚搜到的时候, 信心满满, “我们肯定不会犯这种错误”<br>打脸了</p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>给同事演示, 发现主表<code>utf8</code> join <code>utf8mb4</code>可用索引， 反之则不行。<br>用STRAIGHT_JOIN指定join顺序。<br>同一个类型， 长度不同不影响使用索引。<br><a href="https://github.com/Yhzhtk/note/issues/43" target="_blank" rel="noopener">更多参考</a></p>
 
       
     </div>
@@ -455,7 +513,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/假装是个DevOps/" rel="tag"># 假装是个DevOps</a>
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
           
         </div>
       
@@ -468,18 +526,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/03/StringIO/" rel="next" title="StringIO">
-                <i class="fa fa-chevron-left"></i> StringIO
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/16/Python-字符编码/" rel="prev" title="Python 字符编码">
-                Python 字符编码 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/02/ssl-error.html" rel="prev" title="SSLError">
+                SSLError <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -532,8 +586,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -632,6 +695,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始需求描述"><span class="nav-number">1.</span> <span class="nav-text">原始需求描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL写的烂"><span class="nav-number">2.</span> <span class="nav-text">SQL写的烂?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试理解"><span class="nav-number">3.</span> <span class="nav-text">尝试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引为什么用不上"><span class="nav-number">4.</span> <span class="nav-text">索引为什么用不上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收工"><span class="nav-number">5.</span> <span class="nav-text">收工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">6.</span> <span class="nav-text">后续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

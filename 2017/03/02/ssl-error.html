@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="Generally, yes you should commit it to version control.Especially for applications. For libraries, less so. – kennethreitz  毕竟这是一个 deployment tool">
-<meta name="keywords" content="Python">
+  <meta name="description" content="不敢说自己懂了，记录遇到的问题和解决 接入华为推送遇到 1SSLError(SSLError(&amp;quot;bad handshake: Error([(&amp;apos;SSL routines&amp;apos;, SSL3_GET_SERVER_CERTIFICATE&amp;apos;, &amp;apos;certificate verify failed&amp;apos;)],)&amp;quot;,),)` 确定对方的证书没有问">
+<meta name="keywords" content="假装是个DevOps">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pipenv: should Pipfile.lock be committed to version control?">
-<meta property="og:url" content="https://hargao.github.io/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/index.html">
+<meta property="og:title" content="SSLError">
+<meta property="og:url" content="https://hargao.top/2017/03/02/ssl-error.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="Generally, yes you should commit it to version control.Especially for applications. For libraries, less so. – kennethreitz  毕竟这是一个 deployment tool">
+<meta property="og:description" content="不敢说自己懂了，记录遇到的问题和解决 接入华为推送遇到 1SSLError(SSLError(&amp;quot;bad handshake: Error([(&amp;apos;SSL routines&amp;apos;, SSL3_GET_SERVER_CERTIFICATE&amp;apos;, &amp;apos;certificate verify failed&amp;apos;)],)&amp;quot;,),)` 确定对方的证书没有问">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-04T17:35:04.054Z">
+<meta property="og:updated_time" content="2018-05-30T18:26:14.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pipenv: should Pipfile.lock be committed to version control?">
-<meta name="twitter:description" content="Generally, yes you should commit it to version control.Especially for applications. For libraries, less so. – kennethreitz  毕竟这是一个 deployment tool">
+<meta name="twitter:title" content="SSLError">
+<meta name="twitter:description" content="不敢说自己懂了，记录遇到的问题和解决 接入华为推送遇到 1SSLError(SSLError(&amp;quot;bad handshake: Error([(&amp;apos;SSL routines&amp;apos;, SSL3_GET_SERVER_CERTIFICATE&amp;apos;, &amp;apos;certificate verify failed&amp;apos;)],)&amp;quot;,),)` 确定对方的证书没有问">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.github.io/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/"/>
+  <link rel="canonical" href="https://hargao.top/2017/03/02/ssl-error.html"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>Pipenv: should Pipfile.lock be committed to version control? | Hargao's Blog</title>
+  <title>SSLError | Hargao's Blog</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2017/03/02/ssl-error.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -322,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Pipenv: should Pipfile.lock be committed to version control?
+          <h1 class="post-title" itemprop="name headline">SSLError
               
             
           </h1>
@@ -347,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-03-15 00:15:04" itemprop="dateCreated datePublished" datetime="2018-03-15T00:15:04+08:00">2018-03-15</time>
+              <time title="创建时间：2017-03-02 22:55:00" itemprop="dateCreated datePublished" datetime="2017-03-02T22:55:00+08:00">2017-03-02</time>
             
 
             
@@ -380,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" itemprop="commentCount"></span>
+                <a href="/2017/03/02/ssl-error.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/02/ssl-error.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,7 +389,7 @@
 
           
           
-             <span id="/2018/03/15/Pipenv-should-Pipfile-lock-be-committed-to-version-control/" class="leancloud_visitors" data-flag-title="Pipenv: should Pipfile.lock be committed to version control?">
+             <span id="/2017/03/02/ssl-error.html" class="leancloud_visitors" data-flag-title="SSLError">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,14 +420,30 @@
       
 
       
-        <blockquote>
-<p>Generally, yes you should commit it to version control.<br>Especially for applications. For libraries, less so.</p>
-<p>– kennethreitz</p>
-</blockquote>
-<p>毕竟这是一个 deployment tool</p>
+        <p>不敢说自己懂了，记录遇到的问题和解决</p>
+<p>接入华为推送遇到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SSLError(SSLError(&quot;bad handshake: Error([(&apos;SSL routines&apos;, SSL3_GET_SERVER_CERTIFICATE&apos;, &apos;certificate verify failed&apos;)],)&quot;,),)`</span><br></pre></td></tr></table></figure>
+<p>确定对方的证书没有问题， 所以问题定位在服务器的证书链上</p>
+<p>最偷懒的办法当然是 <code>verify=False</code> 啦， 但是基本操守还是要有的</p>
 <a id="more"></a>
+<h3 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -connect <span class="string">'login.vmall.com:443'</span> -showcerts</span><br><span class="line"></span><br><span class="line">SSL-Session:</span><br><span class="line">  ....</span><br><span class="line">  Verify <span class="built_in">return</span> code: 20 (unable to get <span class="built_in">local</span> issuer certificate)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -CApath /etc/ssl/certs/ -connect &apos;login.vmall.com:443&apos; -showcerts</span><br><span class="line"></span><br><span class="line">SSL-Session:</span><br><span class="line">  ....</span><br><span class="line">  Verify return code: 0 (ok)</span><br></pre></td></tr></table></figure>
+<p>伟大的StackOverflows说， openssl 不默认信任任何证书， 需要由用户指定, 这就是不默认<code>/etc/ssl/certs/</code>为<code>CApath</code>的原因</p>
+<h3 id="解决方法-0-1"><a href="#解决方法-0-1" class="headerlink" title="解决方法 0.1"></a>解决方法 0.1</h3><p>既然认为是CApath的原因， 那就显式的 <code>requests.post(.., verify=&quot;/etc/ssl/certs/&quot;)</code>, stage 环境测试通过， 奔走相告</p>
+<h3 id="高兴的太早了"><a href="#高兴的太早了" class="headerlink" title="高兴的太早了"></a>高兴的太早了</h3><p>上prod后，集中报 <code>CA directories not supported in older Pythons</code>, requests和python版本明明是一样的</p>
+<h3 id="走头无路查阅文档"><a href="#走头无路查阅文档" class="headerlink" title="走头无路查阅文档"></a>走头无路查阅文档</h3><p>得到以下信息:</p>
+<blockquote>
+<ul>
+<li>python 2 (2.7.9 版本以下) 的 ssl 不安全, <a href="https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings" target="_blank" rel="noopener">看这里</a></li>
+<li><a href="https://urllib3.readthedocs.io/en/latest/user-guide.html#ssl-py2" target="_blank" rel="noopener">解决办法</a> 是配合pyopenssl食用</li>
+<li>如果安装了pyopenssl, <code>Requests</code> will then automatically inject pyopenssl into urllib3</li>
+<li>从 Requests 2.4.0 版之后，如果系统中装了 <code>certifi</code> 包，<code>Requests</code> 会试图使用它里边的证书</li>
+</ul>
+</blockquote>
+<p> 推测问题出在上面某个部分， 我相信这么常见的场景， requests不可能不支持。<br>那就重走一遍安装过程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install requests[security]</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install libffi-dev libssl-dev</span><br></pre></td></tr></table></figure></p>
+<p>结论是是libssl-dev 没装好<br>也真是..坑</p>
 <hr>
-<p>References:<br><a href="https://github.com/pypa/pipenv/issues/598" target="_blank" rel="noopener">Pipenv #598</a><br><a href="https://github.com/pypa/pipenv/blob/master/docs/basics.rst#-general-recommendations--version-control" target="_blank" rel="noopener">Pipenv Doc</a></p>
+<p>真·END</p>
 
       
     </div>
@@ -448,7 +464,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/假装是个DevOps/" rel="tag"># 假装是个DevOps</a>
           
         </div>
       
@@ -461,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/01/SQLAlchemy-在生产中遇到的问题/" rel="next" title="SQLAlchemy 在生产中遇到的问题">
-                <i class="fa fa-chevron-left"></i> SQLAlchemy 在生产中遇到的问题
+              <a href="/2017/02/07/mysql-index-not-used.html" rel="next" title="Mysql: CHARSET不一致导致的索引无法命中">
+                <i class="fa fa-chevron-left"></i> Mysql: CHARSET不一致导致的索引无法命中
               </a>
             
           </div>
@@ -471,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/21/SSH端口转发/" rel="prev" title="SSH端口转发">
-                SSH端口转发 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/03/python-stringio.html" rel="prev" title="StringIO">
+                StringIO <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,8 +541,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -625,6 +650,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#openssl"><span class="nav-number">1.</span> <span class="nav-text">openssl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法-0-1"><span class="nav-number">2.</span> <span class="nav-text">解决方法 0.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高兴的太早了"><span class="nav-number">3.</span> <span class="nav-text">高兴的太早了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#走头无路查阅文档"><span class="nav-number">4.</span> <span class="nav-text">走头无路查阅文档</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

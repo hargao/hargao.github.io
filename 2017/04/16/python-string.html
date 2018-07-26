@@ -108,30 +108,25 @@
 
 
 
-  <meta name="description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
-<meta name="keywords" content="数据库">
+  <meta name="description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql: CHARSET不一致导致的索引无法命中">
-<meta property="og:url" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/index.html">
+<meta property="og:title" content="Python 字符编码">
+<meta property="og:url" content="https://hargao.top/2017/04/16/python-string.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
+<meta property="og:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-1.png">
-<meta property="og:image" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-2.png">
-<meta property="og:image" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-3.png">
-<meta property="og:image" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-4.png">
-<meta property="og:updated_time" content="2018-06-06T13:54:18.806Z">
+<meta property="og:updated_time" content="2018-07-23T16:23:42.807Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mysql: CHARSET不一致导致的索引无法命中">
-<meta name="twitter:description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
-<meta name="twitter:image" content="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-1.png">
+<meta name="twitter:title" content="Python 字符编码">
+<meta name="twitter:description" content="Python 2.xUnicode即 unicode string: u&amp;#39;\u6211\u662f\u8c01&amp;#39;统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/"/>
+  <link rel="canonical" href="https://hargao.top/2017/04/16/python-string.html"/>
 
 
 
@@ -141,7 +136,7 @@
   };
 </script>
 
-  <title>Mysql: CHARSET不一致导致的索引无法命中 | Hargao's Blog</title>
+  <title>Python 字符编码 | Hargao's Blog</title>
   
 
 
@@ -310,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.github.io/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2017/04/16/python-string.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -327,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mysql: CHARSET不一致导致的索引无法命中
+          <h1 class="post-title" itemprop="name headline">Python 字符编码
               
             
           </h1>
@@ -352,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2017-02-07 21:17:40" itemprop="dateCreated datePublished" datetime="2017-02-07T21:17:40+08:00">2017-02-07</time>
+              <time title="创建时间：2017-04-16 00:00:00" itemprop="dateCreated datePublished" datetime="2017-04-16T00:00:00+08:00">2017-04-16</time>
             
 
             
@@ -385,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/" itemprop="commentCount"></span>
+                <a href="/2017/04/16/python-string.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/04/16/python-string.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -394,7 +389,7 @@
 
           
           
-             <span id="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/" class="leancloud_visitors" data-flag-title="Mysql: CHARSET不一致导致的索引无法命中">
+             <span id="/2017/04/16/python-string.html" class="leancloud_visitors" data-flag-title="Python 字符编码">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,74 +420,59 @@
       
 
       
-        <h3 id="原始需求描述"><a href="#原始需求描述" class="headerlink" title="原始需求描述"></a>原始需求描述</h3><ul>
-<li>TABLE task,  200w rows</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th>task_no</th>
-<th style="text-align:center">content</th>
-<th style="text-align:center">created</th>
-<th>house_code</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>自增主键</td>
-<td>task编码，uni_key</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:center">创建时间, datetime</td>
-<td>house.code, 无外键</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>TABLE house, 160w rows</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>id</th>
-<th style="text-align:center">code</th>
-<th style="text-align:center">name</th>
-<th>created</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>自增主键</td>
-<td style="text-align:center">house编码，uni_key, 有单列索引</td>
-<td style="text-align:center">名称</td>
-<td>删除状态， 单列索引</td>
-</tr>
-</tbody>
-</table>
-<p>运营要求导出一定时间段, 1万左右的task, 字段包括 task.content 和 house.name,没有 house_code 的保留 null, 半小时都没跑出来.</p>
+        <h2 id="Python-2-x"><a href="#Python-2-x" class="headerlink" title="Python 2.x"></a>Python 2.x</h2><h3 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h3><p>即 unicode string: <code>u&#39;\u6211\u662f\u8c01&#39;</code><br>统一两个字节、也就是16位来表示一个字符. 这是它的十六进制表示. 对应到字符.但是没有定义如何存储.</p>
 <a id="more"></a>
-<h3 id="SQL写的烂"><a href="#SQL写的烂" class="headerlink" title="SQL写的烂?"></a>SQL写的烂?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">LEFT JOIN house ON house.code = t.house_code AND house.deleted = 0</span><br><span class="line">WHERE t.id &gt;= 94210385 AND t.id &lt;= 94860373</span><br><span class="line">AND t.created &gt; &apos;2015-12-17&apos;AND t.created &lt; &apos;2015-01-11&apos;</span><br></pre></td></tr></table></figure>
-<p>explain 看看<br><img src="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-1.png" title="explain1"></p>
-<p>id只起到缩减范围的作用, house.deleted 删掉对效率影响不大。<br>本来很简单的数据， 最后让运营等了三个小时, 还使用了迂回办法: 子查询， 把有 house_code 和 无 house_code 分开导出。<br>但是为什么, 这句SQL执行效率还不如写代码一行行 <code>select name from house where house_code=x</code>, 不能接受。</p>
-<h3 id="尝试理解"><a href="#尝试理解" class="headerlink" title="尝试理解"></a>尝试理解</h3><p>缩减范围, 6个task</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">LEFT JOIN house</span><br><span class="line">ON house.code = t.house_code</span><br><span class="line">WHERE t.id &gt;= 594210385 AND t.id &lt;= 594210390;</span><br></pre></td></tr></table></figure>
-<p>又 EXPLAIN<br><img src="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-2.png" title="explain2"><br><strong>taking 3.02s</strong>, 服气</p>
-<p>现在有两个问题</p>
-<ol>
-<li>house.code 索引用不上。</li>
-<li>我们明确知道, house_code 在 house 最多只有一条, 找到一条就不需要继续了。</li>
-</ol>
-<p>补充一个问题, <code>LEFT JOIN</code> -&gt; <code>JOIN</code>, 即</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT t.task_no, t.content, t.house_code, house.name</span><br><span class="line">FROM task t</span><br><span class="line">JOIN house</span><br><span class="line">ON house.code = t.house_code</span><br><span class="line">WHERE t.id &gt;= 594210385 AND t.id &lt;= 594210390;</span><br></pre></td></tr></table></figure>
-<p>EXPLAIN 出来， 主表变了(又， 排序麻烦在主表上做)<br><img src="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-3.png" title="explain3"></p>
-<p>除此之外， 效率几乎无差</p>
-<h3 id="索引为什么用不上"><a href="#索引为什么用不上" class="headerlink" title="索引为什么用不上"></a>索引为什么用不上</h3><p>找不同发现， 两个表 <code>CHARSET</code> 不同， 分别是 <code>utf8mb4</code> 和 <code>utf8</code><br>两个字段 <code>TYPE</code> 也不同， <code>VARCHAR(32)</code> 和 <code>VARCHAR(64)</code><br>实践证明， 两列都改成<code>utf8mb4</code>以后， 就好了，好了， 好了…..<br><code>TYPE</code> 长度不影响， 顺手改了</p>
-<p>还是 EXPLAIN:<br><img src="/2017/02/07/Mysql-CHARSET不一致导致的索引无法命中/explain-4.png" title="explain4"></p>
-<p>Bingo</p>
-<p>run 一下 <strong>taking 1.5ms</strong></p>
-<p>既然这么快， 问题 2 就没有必要了</p>
-<h3 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h3><p><a href="http://stackoverflow.com/questions/18660252/mysql-why-does-left-join-not-use-an-index" target="_blank" rel="noopener">收工之前， 多谢这位大哥</a><br>刚搜到的时候, 信心满满, “我们肯定不会犯这种错误”<br>打脸了</p>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>给同事演示, 发现主表<code>utf8</code> join <code>utf8mb4</code>可用索引， 反之则不行。<br>用STRAIGHT_JOIN指定join顺序。<br>同一个类型， 长度不同不影响使用索引。<br><a href="https://github.com/Yhzhtk/note/issues/43" target="_blank" rel="noopener">更多参考</a></p>
+<h3 id="str"><a href="#str" class="headerlink" title="str"></a>str</h3><p>即 byte string: <code>&#39;\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81&#39;</code><br>python2 的 str 是”字节串”</p>
+<ul>
+<li><p>ASCII<br>一共规定了128个字符的编码, 只支持英文, 与 unicode 无关</p>
+</li>
+<li><p>GBK<br>中文在ASCII编码基础上做的增强, 兼容 ASCII 编码, 与 unicode 无关</p>
+</li>
+<li><p>UTF-8<br>是对 unicode 编码存储的一种实现方式, 每次8个位传输数据; 一种变长的编码方式. 示例为十六进制表示.<br>8位 * 9 = 72 位。 一个汉字占3个字节<br>兼容ASCII的前128个符号。碰巧兼容GBK的字符和数值</p>
+</li>
+</ul>
+<p>str 有可能是 ascii, gbk, utf-8 等等中的任意一种。 具体是什么编码与 locale ，文件编码等等都有关系</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">"\x3cdiv\x3e"</span>.encode(<span class="string">'ASCII'</span>)</span><br><span class="line"><span class="string">'&lt;div&gt;'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'。'</span>  <span class="comment"># 中文句号</span></span><br><span class="line"><span class="string">u'\u3002'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'。'</span>.encode(<span class="string">'gbk'</span>)</span><br><span class="line"><span class="string">'\xa1\xa3'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'。'</span>.encode(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="string">'\xe3\x80\x82'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'。'</span></span><br><span class="line"><span class="string">'\xe3\x80\x82'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'。'</span>.encode(<span class="string">'ASCII'</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">UnicodeEncodeError: <span class="string">'ascii'</span> codec can<span class="string">'t encode character u'</span>\u3002<span class="string">' in position 0: ordinal not in range(128)</span></span><br></pre></td></tr></table></figure>
+<h3 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="# -*-coding:utf-8 -*-"></a><code># -*-coding:utf-8 -*-</code></h3><p>告诉 python 编译器如何解码代码文件</p>
+<h3 id="decode-amp-encode"><a href="#decode-amp-encode" class="headerlink" title="decode &amp; encode"></a>decode &amp; encode</h3><blockquote>
+<p>If you have a UnicodeDecodeError it probably means the function is waiting for a string.<br>If you have a UnicodeEncodeError, it should be unicode.</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'\u6211\u662f\u8c01'</span>.encode(<span class="string">'UTF-8'</span>)</span><br><span class="line"><span class="string">'\xe6\x88\x91\xe6\x98\xaf\xe8\xb0\x81'</span></span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;<span class="string">'我是谁'</span>.decode(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="string">u'\u6211\u662f\u8c01'</span></span><br></pre></td></tr></table></figure>
+<h2 id="Python-3-x"><a href="#Python-3-x" class="headerlink" title="Python 3.x"></a>Python 3.x</h2><p>记住用flask的时候, Everything from body is byte</p>
+<p>Python 3.x 字符串默认 unicode, 3.x 的 str 就是 unicode</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="string">'我是谁'</span>)</span><br><span class="line">&lt;<span class="class"><span class="keyword">class</span> '<span class="title">str</span>'&gt;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">&gt;&gt;&gt; '我是谁'.<span class="title">encode</span><span class="params">(<span class="string">'utf-8'</span>)</span></span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xe6</span>\<span class="title">x88</span>\<span class="title">x91</span>\<span class="title">xe6</span>\<span class="title">x98</span>\<span class="title">xaf</span>\<span class="title">xe8</span>\<span class="title">xb0</span>\<span class="title">x81</span>'</span></span><br><span class="line"><span class="class">&gt;&gt;&gt; '我是谁'.<span class="title">encode</span><span class="params">(<span class="string">'gbk'</span>)</span></span></span><br><span class="line"><span class="class"><span class="title">b</span>'\<span class="title">xce</span>\<span class="title">xd2</span>\<span class="title">xca</span>\<span class="title">xc7</span>\<span class="title">xcb</span>\<span class="title">xad</span>'</span></span><br></pre></td></tr></table></figure>
+<h2 id="sys-setdefaultencoding"><a href="#sys-setdefaultencoding" class="headerlink" title="sys.setdefaultencoding"></a>sys.setdefaultencoding</h2><p>这段写python2的都很熟悉了. 网上关于编码问题最常见的解决方案</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="先看个例子"><a href="#先看个例子" class="headerlink" title="先看个例子"></a>先看个例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'我'</span> == <span class="string">'我'</span></span><br><span class="line">__main__:<span class="number">1</span>: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them <span class="keyword">as</span> being unequal</span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> sys</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reload(sys)</span><br><span class="line">&lt;module <span class="string">'sys'</span> (built-<span class="keyword">in</span>)&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sys.setdefaultencoding(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">u'我'</span> == <span class="string">'我'</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>unicode(<span class="string">'我'</span>)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">UnicodeDecodeError: <span class="string">'ascii'</span> codec can<span class="string">'t decode byte 0xe6 in position 0: ordinal not in range(128)</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; import sys</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; reload(sys)</span></span><br><span class="line"><span class="string">&lt;module '</span>sys<span class="string">' (built-in)&gt;</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; sys.setdefaultencoding('</span>utf<span class="number">-8</span><span class="string">')</span></span><br><span class="line"><span class="string">&gt;&gt;&gt; unicode('</span>我<span class="string">')</span></span><br><span class="line"><span class="string">u'</span>\u6211<span class="string">'</span></span><br></pre></td></tr></table></figure>
+<h3 id="sys-setdefaultencoding-到底做了什么"><a href="#sys-setdefaultencoding-到底做了什么" class="headerlink" title="sys.setdefaultencoding 到底做了什么"></a>sys.setdefaultencoding 到底做了什么</h3><p><a href="https://docs.python.org/2/library/sys.html#sys.setdefaultencoding" target="_blank" rel="noopener">官方文档</a> 说这是给 site.py 用的. 用来在初始化的时候确定str编码</p>
+<blockquote>
+<p>sys.setdefaultencoding(name)</p>
+<p>Set the current default string encoding used by the Unicode implementation. This function is only intended to be used by the site module implementation and, where needed, by sitecustomize. Once used by the site module, it is removed from the sys module’s namespace.</p>
+</blockquote>
+<h3 id="会造成什么问题-为什么不能用"><a href="#会造成什么问题-为什么不能用" class="headerlink" title="会造成什么问题, 为什么不能用"></a>会造成什么问题, 为什么不能用</h3><blockquote>
+<p> utf-8 encoded byte strings were mixed with unicode text strings</p>
+</blockquote>
+<p>它把需要显式操作的str和unicode之间的转换变成隐式, 但是并没有找到因为重新设置编码导致诡异bug的具体案例.<br>这篇<a href="https://blog.ernest.me/post/python-setdefaultencoding-unicode-bytes" target="_blank" rel="noopener">文章</a>给了一个例子, 但我不太认可, 其实是同一个字符的两种写法？<a href="https://stackoverflow.com/questions/31076677/how-can-i-get-powershell-to-write-%C3%BE-lowercase-thorn-to-a-file-as-0xfe" target="_blank" rel="noopener">这里</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print u&quot;Ã¾&quot;.encode(&quot;latin-1&quot;)</span><br><span class="line">þ</span><br></pre></td></tr></table></figure></p>
+<p>没有得到我想要的答案. 只能说, 不用显得专业…</p>
+<h2 id="unicode-literals"><a href="#unicode-literals" class="headerlink" title="unicode_literals"></a>unicode_literals</h2><p>声明当前模块所有的字符串都是unicode</p>
+<h3 id="为什么pocoo不建议用"><a href="#为什么pocoo不建议用" class="headerlink" title="为什么pocoo不建议用"></a>为什么pocoo不建议用</h3><p>看<a href="https://github.com/PythonCharmers/python-future/issues/22" target="_blank" rel="noopener">这个</a>和<a href="http://python-future.org/imports.html#should-i-import-unicode-literals" target="_blank" rel="noopener">这个</a>就好了, 可能会有下面这些问题</p>
+<blockquote>
+<ul>
+<li>breaking pydoc because of unicode docstrings</li>
+<li>Django breaking filesystem access due to accidentally using unicode paths</li>
+<li>porting things to Py3</li>
+<li>…</li>
+</ul>
+</blockquote>
+<hr>
+<p>References:</p>
+<ul>
+<li><a href="https://segmentfault.com/q/1010000007215946" target="_blank" rel="noopener">https://segmentfault.com/q/1010000007215946</a></li>
+<li><a href="https://github.com/PythonCharmers/python-future/issues/22" target="_blank" rel="noopener">Proposal to not use unicode_literals</a></li>
+<li><a href="https://ziade.org/2008/01/08/syssetdefaultencoding-is-evil/" target="_blank" rel="noopener">sys.setdefaultencoding is evil</a></li>
+<li><a href="https://anonbadger.wordpress.com/2015/06/16/why-sys-setdefaultencoding-will-break-code/" target="_blank" rel="noopener">Why sys.setdefaultencoding() will break code</a></li>
+<li><a href="http://python-future.org/imports.html#should-i-import-unicode-literals" target="_blank" rel="noopener">http://python-future.org/imports.html#should-i-import-unicode-literals</a></li>
+</ul>
 
       
     </div>
@@ -513,7 +493,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -526,14 +506,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/07/localhost.html" rel="next" title="127.0.0.1, 127.0.1.1和 localhost">
+                <i class="fa fa-chevron-left"></i> 127.0.0.1, 127.0.1.1和 localhost
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/02/SSLError/" rel="prev" title="SSLError">
-                SSLError <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/01/sqlalchemy-error.html" rel="prev" title="SQLAlchemy 在生产中遇到的问题">
+                SQLAlchemy 在生产中遇到的问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -705,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始需求描述"><span class="nav-number">1.</span> <span class="nav-text">原始需求描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL写的烂"><span class="nav-number">2.</span> <span class="nav-text">SQL写的烂?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试理解"><span class="nav-number">3.</span> <span class="nav-text">尝试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引为什么用不上"><span class="nav-number">4.</span> <span class="nav-text">索引为什么用不上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收工"><span class="nav-number">5.</span> <span class="nav-text">收工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">6.</span> <span class="nav-text">后续</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-2-x"><span class="nav-number">1.</span> <span class="nav-text">Python 2.x</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Unicode"><span class="nav-number">1.1.</span> <span class="nav-text">Unicode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str"><span class="nav-number">1.2.</span> <span class="nav-text">str</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coding-utf-8"><span class="nav-number">1.3.</span> <span class="nav-text"># -*-coding:utf-8 -*-</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decode-amp-encode"><span class="nav-number">1.4.</span> <span class="nav-text">decode &amp; encode</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-3-x"><span class="nav-number">2.</span> <span class="nav-text">Python 3.x</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sys-setdefaultencoding"><span class="nav-number">3.</span> <span class="nav-text">sys.setdefaultencoding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先看个例子"><span class="nav-number">3.1.</span> <span class="nav-text">先看个例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sys-setdefaultencoding-到底做了什么"><span class="nav-number">3.2.</span> <span class="nav-text">sys.setdefaultencoding 到底做了什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#会造成什么问题-为什么不能用"><span class="nav-number">3.3.</span> <span class="nav-text">会造成什么问题, 为什么不能用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unicode-literals"><span class="nav-number">4.</span> <span class="nav-text">unicode_literals</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么pocoo不建议用"><span class="nav-number">4.1.</span> <span class="nav-text">为什么pocoo不建议用</span></a></li></ol></li></ol></div>
             
 
           </div>
