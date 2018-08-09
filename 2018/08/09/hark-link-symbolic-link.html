@@ -108,25 +108,28 @@
 
 
 
-  <meta name="description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
-<meta name="keywords" content="假装是个DevOps">
+  <meta name="description" content="总忘. 记一下 ls看一下">
+<meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="127.0.0.1, 127.0.1.1和 localhost">
-<meta property="og:url" content="https://hargao.top/2017/03/07/localhost.html">
+<meta property="og:title" content="Hark Link 和 Symbolic Link">
+<meta property="og:url" content="https://hargao.top/2018/08/09/hark-link-symbolic-link.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
+<meta property="og:description" content="总忘. 记一下 ls看一下">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T19:15:08.080Z">
+<meta property="og:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/ls.png">
+<meta property="og:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/inode.jpg">
+<meta property="og:updated_time" content="2018-08-09T14:50:10.708Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="127.0.0.1, 127.0.1.1和 localhost">
-<meta name="twitter:description" content="本文测试环境：12$ uname -aLinux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux 起因是修改服务器 /etc/hostname 和 /etc/hosts 同事坚持 A12127.0.0.1 localhost127.0.1.1 &amp;lt;h">
+<meta name="twitter:title" content="Hark Link 和 Symbolic Link">
+<meta name="twitter:description" content="总忘. 记一下 ls看一下">
+<meta name="twitter:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/ls.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.top/2017/03/07/localhost.html"/>
+  <link rel="canonical" href="https://hargao.top/2018/08/09/hark-link-symbolic-link.html"/>
 
 
 
@@ -136,7 +139,7 @@
   };
 </script>
 
-  <title>127.0.0.1, 127.0.1.1和 localhost | Hargao's Blog</title>
+  <title>Hark Link 和 Symbolic Link | Hargao's Blog</title>
   
 
 
@@ -305,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.top/2017/03/07/localhost.html">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2018/08/09/hark-link-symbolic-link.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -322,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">127.0.0.1, 127.0.1.1和 localhost
+          <h1 class="post-title" itemprop="name headline">Hark Link 和 Symbolic Link
               
             
           </h1>
@@ -347,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2017-03-07 20:37:00" itemprop="dateCreated datePublished" datetime="2017-03-07T20:37:00+08:00">2017-03-07</time>
+              <time title="创建时间：2018-08-09 22:26:19" itemprop="dateCreated datePublished" datetime="2018-08-09T22:26:19+08:00">2018-08-09</time>
             
 
             
@@ -380,8 +383,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/07/localhost.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/03/07/localhost.html" itemprop="commentCount"></span>
+                <a href="/2018/08/09/hark-link-symbolic-link.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/09/hark-link-symbolic-link.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -389,7 +392,7 @@
 
           
           
-             <span id="/2017/03/07/localhost.html" class="leancloud_visitors" data-flag-title="127.0.0.1, 127.0.1.1和 localhost">
+             <span id="/2018/08/09/hark-link-symbolic-link.html" class="leancloud_visitors" data-flag-title="Hark Link 和 Symbolic Link">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -420,21 +423,20 @@
       
 
       
-        <p>本文测试环境：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
-<p>起因是修改服务器 <code>/etc/hostname</code> 和 <code>/etc/hosts</code></p>
-<p>同事坚持 A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.1.1 &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>而我试了一下 B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>总忘. 记一下</p>
+<h3 id="ls看一下"><a href="#ls看一下" class="headerlink" title="ls看一下"></a>ls看一下</h3><img src="/2018/08/09/hark-link-symbolic-link/ls.png" title="ls">
 <a id="more"></a>
-<p>明明也是没有问题的嘛。 随手查<a href="http://www.debian.org/doc/manuals/debian-reference/ch05.en.html#_the_hostname_resolution" target="_blank" rel="noopener">文档</a>。 注意这两句</p>
-<blockquote>
-<p>The IP address 127.0.1.1 in the second line of this example may not be found on some other Unix-like systems. The <a href="http://en.wikipedia.org/wiki/Debian-Installer" target="_blank" rel="noopener">Debian Installer</a> creates this entry for a system without a permanent IP address as a <strong><em>workaround</em></strong> for some software (e.g., GNOME) as documented in the <a href="http://bugs.debian.org/719621" target="_blank" rel="noopener">bug #719621</a>.</p>
-</blockquote>
-<blockquote>
-<p>For a system with a permanent IP address, that permanent IP address should be used here instead of 127.0.1.1.</p>
-</blockquote>
-<p>127.0.0.1 和 127.0.1.1 都属于 127.0.0.0/8  loopback地址， 本质没有区别。 和127.255.255.254 也没区别。</p>
-<p>结论是，如果你需要一个单独的入口， 又没有真实的固定IP， 那就用A。 至于为什么默认A， 因为 GNOME.<br>如果有固定ip, <code>127.0.1.1</code> 替换成固定ip, 结束</p>
-<p>同时也兼容各种getfqdn()不会get到localhost, <a href="https://onebitbug.me/2014/06/25/settings-fqdn-in-linux/" target="_blank" rel="noopener">这里</a></p>
+<h3 id="Linux-中的文件存储"><a href="#Linux-中的文件存储" class="headerlink" title="Linux 中的文件存储"></a>Linux 中的文件存储</h3><img src="/2018/08/09/hark-link-symbolic-link/inode.jpg" title="inode">
+<h3 id="类比一下"><a href="#类比一下" class="headerlink" title="类比一下"></a>类比一下</h3><ul>
+<li><p>Hark: Python的引用.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = [1,2]</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; del a</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[1, 2]</span><br></pre></td></tr></table></figure>
+<p>  b就是那个”hard link”</p>
+</li>
+<li><p>Symbolic: windows 下的快捷方程式</p>
+</li>
+</ul>
+<hr>
+<p>References:<br><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-hardandsymb-links/" target="_blank" rel="noopener">理解 Linux 的硬链接与软链接</a></p>
 
       
     </div>
@@ -455,7 +457,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/假装是个DevOps/" rel="tag"># 假装是个DevOps</a>
+            <a href="/tags/基础/" rel="tag"># 基础</a>
           
         </div>
       
@@ -468,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/03/python-stringio.html" rel="next" title="StringIO">
-                <i class="fa fa-chevron-left"></i> StringIO
+              <a href="/2018/07/24/hexo-mindmap.html" rel="next" title="Hexo 渲染思维导图">
+                <i class="fa fa-chevron-left"></i> Hexo 渲染思维导图
               </a>
             
           </div>
@@ -477,10 +479,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/16/python-string.html" rel="prev" title="Python 字符编码">
-                Python 字符编码 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -532,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -638,6 +645,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls看一下"><span class="nav-number">1.</span> <span class="nav-text">ls看一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-中的文件存储"><span class="nav-number">2.</span> <span class="nav-text">Linux 中的文件存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类比一下"><span class="nav-number">3.</span> <span class="nav-text">类比一下</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
