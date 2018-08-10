@@ -421,20 +421,14 @@
 
       
         
-          
-            <p>公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒<br>以前装过proxychains下载youtube视频, 就想试试能不能用起来</p>
-<h3 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 失败</span><br><span class="line"><span class="meta">%</span> proxychains4 open /Applications/NeteaseMusic.app</span><br><span class="line"></span><br><span class="line">// 看了 proxychains issue 之后, 失败, 报错couldnt find configuration file: No such file or directory</span><br><span class="line"><span class="meta">%</span> proxychains4 /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span><br><span class="line"></span><br><span class="line">// proxychains 配置文件复制一份放在沙盒下。 启动成功, 但是没有成功代理</span><br><span class="line"><span class="meta">%</span> proxychains4 -f ~/Library/Containers/com.netease.163music/Data/proxychains.conf /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span><br><span class="line"></span><br><span class="line">// curl 测试, 配置是成功的</span><br><span class="line"><span class="meta">%</span> proxychains4 /usr/local/Cellar/curl/7.61.0/bin/curl ip.cn</span><br><span class="line">[proxychains] config file found: /usr/local/etc/proxychains.conf</span><br><span class="line">[proxychains] preloading /usr/local/Cellar/proxychains-ng/4.13/lib/libproxychains4.dylib</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.13</span><br><span class="line">[proxychains] Strict chain  ...  127.0.0.1:1086  ...  ip.cn:80  ...  OK</span><br><span class="line">当前 IP：42.200.116.102 来自：香港特别行政区 香港电讯</span><br></pre></td></tr></table></figure>
-<p>鉴于这个<a href="https://github.com/rofl0r/proxychains-ng/issues/181" target="_blank" rel="noopener">issue</a>, 选择放弃.<br>而且面临的下一个问题是, 得把网易云流量代理到境内(海外有版权问题), 其他流量代理到境外. 起两个ss?</p>
-<h3 id="PAC"><a href="#PAC" class="headerlink" title="PAC"></a>PAC</h3><p>新思路是, ss使用PAC模式. 把网易云的流量代理到阿里ECS上去.</p>
-<h4 id="编辑gfwlist-js"><a href="#编辑gfwlist-js" class="headerlink" title="编辑gfwlist.js"></a>编辑gfwlist.js</h4><p>编辑 <code>FindProxyForURL</code><br>把 网易音乐 流量打到 127.0.0.1:9000</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindProxyForURL</span>(<span class="params">url, host</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> netease_url = [<span class="string">'music.163.com'</span>,<span class="string">'p1.music.126.net'</span>,<span class="string">'p2.music.126.net'</span>,<span class="string">'p3.music.126.net'</span>, <span class="string">'p4.music.126.net'</span>]</span><br><span class="line">  <span class="keyword">for</span> (url <span class="keyword">in</span> netease_url)&#123;</span><br><span class="line">    <span class="keyword">if</span> (host.indexOf(url) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span>  <span class="string">'SOCKS5 127.0.0.1:9000; DIRECT;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (defaultMatcher.matchesAny(url, host) <span class="keyword">instanceof</span> BlockingFilter) &#123;</span><br><span class="line">    <span class="keyword">return</span> proxy;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> direct;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="在ECS上搭ss"><a href="#在ECS上搭ss" class="headerlink" title="在ECS上搭ss"></a>在ECS上搭ss</h4><p>在控制台编辑规则开放端口的时候需要验证手机号. 留的旧手机, 找不着了</p>
-<h4 id="ssh-开个转发"><a href="#ssh-开个转发" class="headerlink" title="ssh 开个转发"></a>ssh 开个转发</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -D 9000 aliyun</span><br></pre></td></tr></table></figure>
-<p>看起来可以了。 周一回公司测试</p>
-<hr>
-<p>References:<br><a href="https://zhuanlan.zhihu.com/p/20284019" target="_blank" rel="noopener">OS X, El Capitan, Proxychains以及强制app使用透明socks代理</a><br><a href="https://github.com/rofl0r/proxychains-ng/issues/181" target="_blank" rel="noopener">Mac applications ignore proxychains after successful preloading</a></p>
-
-          
+          <p>公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒<br>以前装过proxychains下载youtube视频, 就想试试能不能用起来</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/10/proxychains.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1870,7 +1864,7 @@
 
       
         
-          <p>本文测试环境：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> uname -a</span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
+          <p>本文测试环境：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> uname -a</span></span><br><span class="line">Linux xxx 3.13.0-32-generic #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux</span><br></pre></td></tr></table></figure></p>
 <p>起因是修改服务器 <code>/etc/hostname</code> 和 <code>/etc/hosts</code></p>
 <p>同事坚持 A<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.1.1 &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
 <p>而我试了一下 B<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 localhost &lt;host_name&gt;</span><br></pre></td></tr></table></figure></p>
@@ -2160,8 +2154,6 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
-                    
-                      
                     
                       
                     

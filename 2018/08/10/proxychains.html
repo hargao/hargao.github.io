@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来 proxychains12345678910111213141516// 失败% proxychains4 open /Applications/NeteaseMusic.app// 看了 proxychains issue 之后, 失败, 报错couldnt fi">
+  <meta name="description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来">
 <meta name="keywords" content="Mac,proxychains">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流量代理">
 <meta property="og:url" content="https://hargao.top/2018/08/10/proxychains.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来 proxychains12345678910111213141516// 失败% proxychains4 open /Applications/NeteaseMusic.app// 看了 proxychains issue 之后, 失败, 报错couldnt fi">
+<meta property="og:description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-10T17:29:24.222Z">
+<meta property="og:updated_time" content="2018-08-10T17:31:02.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="流量代理">
-<meta name="twitter:description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来 proxychains12345678910111213141516// 失败% proxychains4 open /Applications/NeteaseMusic.app// 看了 proxychains issue 之后, 失败, 报错couldnt fi">
+<meta name="twitter:description" content="公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒以前装过proxychains下载youtube视频, 就想试试能不能用起来">
 
 
 
@@ -421,7 +421,8 @@
 
       
         <p>公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒<br>以前装过proxychains下载youtube视频, 就想试试能不能用起来</p>
-<h3 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 失败</span><br><span class="line"><span class="meta">%</span> proxychains4 open /Applications/NeteaseMusic.app</span><br><span class="line"></span><br><span class="line">// 看了 proxychains issue 之后, 失败, 报错couldnt find configuration file: No such file or directory</span><br><span class="line"><span class="meta">%</span> proxychains4 /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span><br><span class="line"></span><br><span class="line">// proxychains 配置文件复制一份放在沙盒下。 启动成功, 但是没有成功代理</span><br><span class="line"><span class="meta">%</span> proxychains4 -f ~/Library/Containers/com.netease.163music/Data/proxychains.conf /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span><br><span class="line"></span><br><span class="line">// curl 测试, 配置是成功的</span><br><span class="line"><span class="meta">%</span> proxychains4 /usr/local/Cellar/curl/7.61.0/bin/curl ip.cn</span><br><span class="line">[proxychains] config file found: /usr/local/etc/proxychains.conf</span><br><span class="line">[proxychains] preloading /usr/local/Cellar/proxychains-ng/4.13/lib/libproxychains4.dylib</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.13</span><br><span class="line">[proxychains] Strict chain  ...  127.0.0.1:1086  ...  ip.cn:80  ...  OK</span><br><span class="line">当前 IP：42.200.116.102 来自：香港特别行政区 香港电讯</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="proxychains"><a href="#proxychains" class="headerlink" title="proxychains"></a>proxychains</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 失败</span><br><span class="line"><span class="meta">%</span><span class="bash"> proxychains4 open /Applications/NeteaseMusic.app</span></span><br><span class="line"></span><br><span class="line">// 看了 proxychains issue 之后, 失败, 报错couldnt find configuration file: No such file or directory</span><br><span class="line"><span class="meta">%</span><span class="bash"> proxychains4 /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span></span><br><span class="line"></span><br><span class="line">// proxychains 配置文件复制一份放在沙盒下。 启动成功, 但是没有成功代理</span><br><span class="line"><span class="meta">%</span><span class="bash"> proxychains4 -f ~/Library/Containers/com.netease.163music/Data/proxychains.conf /Applications/NeteaseMusic.app/Contents/MacOS/NeteaseMusic</span></span><br><span class="line"></span><br><span class="line">// curl 测试, 配置是成功的</span><br><span class="line"><span class="meta">%</span><span class="bash"> proxychains4 /usr/<span class="built_in">local</span>/Cellar/curl/7.61.0/bin/curl ip.cn</span></span><br><span class="line">[proxychains] config file found: /usr/local/etc/proxychains.conf</span><br><span class="line">[proxychains] preloading /usr/local/Cellar/proxychains-ng/4.13/lib/libproxychains4.dylib</span><br><span class="line">[proxychains] DLL init: proxychains-ng 4.13</span><br><span class="line">[proxychains] Strict chain  ...  127.0.0.1:1086  ...  ip.cn:80  ...  OK</span><br><span class="line">当前 IP：42.200.116.102 来自：香港特别行政区 香港电讯</span><br></pre></td></tr></table></figure>
 <p>鉴于这个<a href="https://github.com/rofl0r/proxychains-ng/issues/181" target="_blank" rel="noopener">issue</a>, 选择放弃.<br>而且面临的下一个问题是, 得把网易云流量代理到境内(海外有版权问题), 其他流量代理到境外. 起两个ss?</p>
 <h3 id="PAC"><a href="#PAC" class="headerlink" title="PAC"></a>PAC</h3><p>新思路是, ss使用PAC模式. 把网易云的流量代理到阿里ECS上去.</p>
 <h4 id="编辑gfwlist-js"><a href="#编辑gfwlist-js" class="headerlink" title="编辑gfwlist.js"></a>编辑gfwlist.js</h4><p>编辑 <code>FindProxyForURL</code><br>把 网易音乐 流量打到 127.0.0.1:9000</p>
@@ -563,8 +564,6 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
-                    
-                      
                     
                       
                     
