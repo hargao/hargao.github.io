@@ -108,28 +108,25 @@
 
 
 
-  <meta name="description" content="总忘. 记一下 ls看一下">
-<meta name="keywords" content="基础">
+  <meta name="description" content="Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次优化所做的变更. 依赖123Python 2.7.14Mysql 5.7.21flask_migrate == 2.0.3">
+<meta name="keywords" content="Python,Alembic,Migration">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hark Link 和 Symbolic Link">
-<meta property="og:url" content="https://hargao.top/2018/08/09/hark-link-symbolic-link.html">
+<meta property="og:title" content="Migration 优化">
+<meta property="og:url" content="https://hargao.top/2018/08/11/migration-optimization.html">
 <meta property="og:site_name" content="Hargao&#39;s Blog">
-<meta property="og:description" content="总忘. 记一下 ls看一下">
+<meta property="og:description" content="Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次优化所做的变更. 依赖123Python 2.7.14Mysql 5.7.21flask_migrate == 2.0.3">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/ls.png">
-<meta property="og:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/inode.jpg">
-<meta property="og:updated_time" content="2018-08-09T14:50:10.708Z">
+<meta property="og:updated_time" content="2018-08-11T08:15:43.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hark Link 和 Symbolic Link">
-<meta name="twitter:description" content="总忘. 记一下 ls看一下">
-<meta name="twitter:image" content="https://hargao.top/2018/08/09/hark-link-symbolic-link/ls.png">
+<meta name="twitter:title" content="Migration 优化">
+<meta name="twitter:description" content="Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次优化所做的变更. 依赖123Python 2.7.14Mysql 5.7.21flask_migrate == 2.0.3">
 
 
 
 
 
 
-  <link rel="canonical" href="https://hargao.top/2018/08/09/hark-link-symbolic-link.html"/>
+  <link rel="canonical" href="https://hargao.top/2018/08/11/migration-optimization.html"/>
 
 
 
@@ -139,7 +136,7 @@
   };
 </script>
 
-  <title>Hark Link 和 Symbolic Link | Hargao's Blog</title>
+  <title>Migration 优化 | Hargao's Blog</title>
   
 
 
@@ -308,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hargao.top/2018/08/09/hark-link-symbolic-link.html">
+    <link itemprop="mainEntityOfPage" href="https://hargao.top/2018/08/11/migration-optimization.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hargao">
@@ -325,7 +322,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hark Link 和 Symbolic Link
+          <h1 class="post-title" itemprop="name headline">Migration 优化
               
             
           </h1>
@@ -350,7 +347,7 @@
                 
               
 
-              <time title="创建时间：2018-08-09 22:26:19" itemprop="dateCreated datePublished" datetime="2018-08-09T22:26:19+08:00">2018-08-09</time>
+              <time title="创建时间：2018-08-11 16:15:30" itemprop="dateCreated datePublished" datetime="2018-08-11T16:15:30+08:00">2018-08-11</time>
             
 
             
@@ -383,8 +380,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/09/hark-link-symbolic-link.html#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/09/hark-link-symbolic-link.html" itemprop="commentCount"></span>
+                <a href="/2018/08/11/migration-optimization.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/08/11/migration-optimization.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -392,7 +389,7 @@
 
           
           
-             <span id="/2018/08/09/hark-link-symbolic-link.html" class="leancloud_visitors" data-flag-title="Hark Link 和 Symbolic Link">
+             <span id="/2018/08/11/migration-optimization.html" class="leancloud_visitors" data-flag-title="Migration 优化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -423,20 +420,36 @@
       
 
       
-        <p>总忘. 记一下</p>
-<h3 id="ls看一下"><a href="#ls看一下" class="headerlink" title="ls看一下"></a>ls看一下</h3><img src="/2018/08/09/hark-link-symbolic-link/ls.png" title="ls">
+        <p>Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次优化所做的变更.</p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Python 2.7.14</span><br><span class="line">Mysql 5.7.21</span><br><span class="line">flask_migrate == 2.0.3</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="Linux-中的文件存储"><a href="#Linux-中的文件存储" class="headerlink" title="Linux 中的文件存储"></a>Linux 中的文件存储</h3><img src="/2018/08/09/hark-link-symbolic-link/inode.jpg" title="inode">
-<h3 id="类比一下"><a href="#类比一下" class="headerlink" title="类比一下"></a>类比一下</h3><ul>
-<li><p>Hark: Python的引用.</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; a = [1,2]</span><br><span class="line">&gt;&gt;&gt; b = a</span><br><span class="line">&gt;&gt;&gt; del a</span><br><span class="line">&gt;&gt;&gt; b</span><br><span class="line">[1, 2]</span><br></pre></td></tr></table></figure>
-<p>  b就是那个”hard link”</p>
-</li>
-<li><p>Symbolic: windows 下的快捷方程式</p>
-</li>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><p><code>./migrations/env.py</code></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="检测类型变化"><a href="#检测类型变化" class="headerlink" title="检测类型变化"></a>检测类型变化</h3><p>默认不检测类型变化. 增加<code>compare_type=True</code>到 <code>run_migrations_online</code> 函数的 <code>context.configure</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">context.configure(</span><br><span class="line">    connection=connection,</span><br><span class="line">    target_metadata=target_metadata,</span><br><span class="line">    process_revision_directives=process_revision_directives,</span><br><span class="line">    compare_type=<span class="keyword">True</span>,</span><br><span class="line">    include_object=include_object,</span><br><span class="line">    **current_app.extensions[<span class="string">'migrate'</span>].configure_args)</span><br></pre></td></tr></table></figure>
+<h3 id="指定-column-的-charset-和-collation"><a href="#指定-column-的-charset-和-collation" class="headerlink" title="指定 column 的 charset 和 collation"></a>指定 column 的 charset 和 collation</h3><p>常用于数据库默认charset为utf8, 需要指定列为utf8mb4的情况下. 但是更建议全部使用utf8mb4</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content = db.Column(TEXT(charset=<span class="string">'utf8mb4'</span>, collation=<span class="string">'utf8mb4_unicode_ci'</span>))</span><br></pre></td></tr></table></figure>
+<h3 id="处理-Mysql-中-Boolean-和-Tinyint"><a href="#处理-Mysql-中-Boolean-和-Tinyint" class="headerlink" title="处理 Mysql 中 Boolean 和 Tinyint"></a>处理 Mysql 中 Boolean 和 Tinyint</h3><p>boolean 在 Mysql 中是 tinyint(1) 的 alias. 所以每次SQLAlchemy都会检测出类型变化. 很是困扰<br>参考这两个 issue <a href="https://bitbucket.org/zzzeek/alembic/issues/46/mysqltinyint-display_width-1-vs-saboolean" target="_blank" rel="noopener">1</a> <a href="https://bitbucket.org/zzzeek/alembic_moved_from_hg_to_git/issues/84/alembic-tries-to-convert-field-from" target="_blank" rel="noopener">2</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> Boolean</span><br><span class="line"><span class="keyword">from</span> sqlalchemy.dialects <span class="keyword">import</span> mysql</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_compare_type</span><span class="params">(context, inspected_column, metadata_column, inspected_type, metadata_type)</span>:</span></span><br><span class="line">    <span class="comment"># return False if the metadata_type is the same as the inspected_type</span></span><br><span class="line">    <span class="comment"># or None to allow the default implementation to compare these</span></span><br><span class="line">    <span class="comment"># types. a return value of True means the two types do not</span></span><br><span class="line">    <span class="comment"># match and should result in a type change operation.</span></span><br><span class="line">    <span class="keyword">if</span> isinstance(inspected_type, mysql.TINYINT) <span class="keyword">and</span> isinstance(metadata_type, Boolean):</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">context.configure(</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    compare_type = my_compare_type</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="排除某个-Bind"><a href="#排除某个-Bind" class="headerlink" title="排除某个 Bind"></a>排除某个 Bind</h3><p>主库之后为了读数据 bind 了另一数据库. 只读不写, 而且只读部分表, 并没有定义所有model</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">include_object</span><span class="params">(object, name, type_, reflected, compare_to)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> type_ == <span class="string">"table"</span> <span class="keyword">and</span> object.info.get(<span class="string">'bind_key'</span>) == <span class="string">'exclude_database'</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">False</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">context.configure(</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    include_object=include_object</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="Add-column-时支持-AFTER"><a href="#Add-column-时支持-AFTER" class="headerlink" title="Add column 时支持 AFTER"></a>Add column 时支持 AFTER</h3><p>参考了 <a href="https://groups.google.com/forum/#!msg/sqlalchemy-alembic/izYq2EMYotI/LzV7y8jOssIJ" target="_blank" rel="noopener">google forum</a> 和 Alembic AddColumn 的实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># env.py</span></span><br><span class="line"><span class="keyword">from</span> sqlalchemy.ext.compiler <span class="keyword">import</span> compiles</span><br><span class="line"><span class="keyword">from</span> alembic.ddl.base <span class="keyword">import</span> AddColumn, alter_table, add_column</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@compiles(AddColumn, 'mysql')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_add_column</span><span class="params">(element, compiler, **kw)</span>:</span></span><br><span class="line">    text = <span class="string">"%s %s"</span> % (</span><br><span class="line">        alter_table(compiler, element.table_name, element.schema),</span><br><span class="line">        add_column(compiler, element.column, **kw)</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">if</span> <span class="string">"after"</span> <span class="keyword">in</span> element.column.info:</span><br><span class="line">        text += <span class="string">" AFTER %s"</span> % element.column.info[<span class="string">'after'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> text</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># migration 中手动指定 after</span></span><br><span class="line">op.add_column(</span><br><span class="line">        <span class="string">'test'</span>,</span><br><span class="line">        sa.Column(<span class="string">'col2'</span>, mysql.VARCHAR(length=<span class="number">32</span>), nullable=<span class="keyword">True</span>, info=&#123;<span class="string">"after"</span>: <span class="string">"col1"</span>&#125;))</span><br></pre></td></tr></table></figure>
+<p>写起来还是挺头疼, 需要调整一遍顺序.</p>
+<h2 id="待优化"><a href="#待优化" class="headerlink" title="待优化"></a>待优化</h2><ul>
+<li>不能自动按照在 class 定义的顺序生成 after</li>
+<li>不支持 online ddl. 自动加上 <code>ALGORITHM=INPLACE, LOCK=None</code></li>
+<li>CHARSET 混乱. 希望生成migration时能自动指定</li>
 </ul>
 <hr>
-<p>References:<br><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-hardandsymb-links/" target="_blank" rel="noopener">理解 Linux 的硬链接与软链接</a></p>
+<p>References:</p>
+<ul>
+<li><a href="https://groups.google.com/forum/#!msg/sqlalchemy-alembic/izYq2EMYotI/LzV7y8jOssIJ" target="_blank" rel="noopener">Altering the behavior of AddColumn</a></li>
+<li><a href="http://docs.sqlalchemy.org/en/latest/core/compiler.html#changing-the-default-compilation-of-existing-constructs" target="_blank" rel="noopener">Changing the default compilation of existing constructs</a></li>
+<li><a href="https://bitbucket.org/zzzeek/alembic/issues/46/mysqltinyint-display_width-1-vs-saboolean" target="_blank" rel="noopener">mysql.TINYINT(display_width=1) vs sa.Boolean()</a></li>
+<li><a href="https://bitbucket.org/zzzeek/alembic_moved_from_hg_to_git/issues/84/alembic-tries-to-convert-field-from" target="_blank" rel="noopener">alembic tries to convert field from TinyInt to Boolean on MySQL</a></li>
+<li><a href="http://alembic.zzzcomputing.com/en/latest/autogenerate.html#comparing-types" target="_blank" rel="noopener">Auto Generating Migrations</a></li>
+</ul>
 
       
     </div>
@@ -457,7 +470,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/基础/" rel="tag"># 基础</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Alembic/" rel="tag"># Alembic</a>
+          
+            <a href="/tags/Migration/" rel="tag"># Migration</a>
           
         </div>
       
@@ -470,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/24/hexo-mindmap.html" rel="next" title="Hexo 渲染思维导图">
-                <i class="fa fa-chevron-left"></i> Hexo 渲染思维导图
+              <a href="/2018/08/10/proxychains.html" rel="next" title="流量代理">
+                <i class="fa fa-chevron-left"></i> 流量代理
               </a>
             
           </div>
@@ -479,10 +496,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/10/proxychains.html" rel="prev" title="流量代理">
-                流量代理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -667,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls看一下"><span class="nav-number">1.</span> <span class="nav-text">ls看一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-中的文件存储"><span class="nav-number">2.</span> <span class="nav-text">Linux 中的文件存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类比一下"><span class="nav-number">3.</span> <span class="nav-text">类比一下</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖"><span class="nav-number">1.</span> <span class="nav-text">依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件"><span class="nav-number">2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">3.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检测类型变化"><span class="nav-number">3.1.</span> <span class="nav-text">检测类型变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定-column-的-charset-和-collation"><span class="nav-number">3.2.</span> <span class="nav-text">指定 column 的 charset 和 collation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理-Mysql-中-Boolean-和-Tinyint"><span class="nav-number">3.3.</span> <span class="nav-text">处理 Mysql 中 Boolean 和 Tinyint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排除某个-Bind"><span class="nav-number">3.4.</span> <span class="nav-text">排除某个 Bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-column-时支持-AFTER"><span class="nav-number">3.5.</span> <span class="nav-text">Add column 时支持 AFTER</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待优化"><span class="nav-number">4.</span> <span class="nav-text">待优化</span></a></li></ol></div>
             
 
           </div>
