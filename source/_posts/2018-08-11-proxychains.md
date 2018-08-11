@@ -11,6 +11,8 @@ date: 2018-08-10 23:22:28
 公司墙了网易云音乐. 最简单的方式是换QQ音乐. 可是懒
 以前装过proxychains下载youtube视频, 就想试试能不能用起来
 
+<!-- more -->
+
 ### proxychains
 
 ```shell
