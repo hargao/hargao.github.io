@@ -83,3 +83,7 @@ deploy:
   branch: master
   name: hargao
   email: flying.hargao@gmail.com
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification: Gypg2D613a5LU-93cuXzs2cgf9NrNzPeddmjmyLO8wY

@@ -1,5 +1,5 @@
 ---
-title: Migration 优化
+title: Migration 使用优化
 date: 2018-08-11 16:15:30
 tags:
   - Alembic
@@ -10,7 +10,7 @@ categories:
 ---
 
 
-Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次优化所做的变更.
+Flask-Migrate 作为 Flask 最常使用的 migration 工具, 默认行为有很多不符合我们的期望. 记录历次使用优化所做的变更.
 
 ## 依赖
 
