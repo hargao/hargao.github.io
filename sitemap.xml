@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hargao.top/2018/08/24/python-is-simple.html</loc>
+    
+    <lastmod>2018-08-23T16:11:48.159Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hargao.top/2017/04/16/python-string.html</loc>
+    
+    <lastmod>2018-08-23T16:10:13.334Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hargao.top/2017/03/07/localhost.html</loc>
+    
+    <lastmod>2018-08-23T16:10:08.869Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://hargao.top/2017/03/03/python-stringio.html</loc>
+    
+    <lastmod>2018-08-23T16:09:59.730Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hargao.top/2018/08/11/migration-optimization.html</loc>
     
-    <lastmod>2018-08-12T10:46:02.751Z</lastmod>
+    <lastmod>2018-08-12T11:33:39.534Z</lastmod>
     
   </url>
   
@@ -37,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://hargao.top/2017/04/16/python-string.html</loc>
-    
-    <lastmod>2018-07-23T16:23:42.807Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://hargao.top/2018/04/21/ssh-forward.html</loc>
     
     <lastmod>2018-07-22T16:29:14.055Z</lastmod>
@@ -68,20 +89,6 @@
     <loc>https://hargao.top/2017/05/01/sqlalchemy-error.html</loc>
     
     <lastmod>2018-06-01T18:52:46.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hargao.top/2017/03/03/python-stringio.html</loc>
-    
-    <lastmod>2018-06-01T02:04:40.594Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hargao.top/2017/03/07/localhost.html</loc>
-    
-    <lastmod>2018-05-30T19:15:08.080Z</lastmod>
     
   </url>
   
