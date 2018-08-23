@@ -2,9 +2,9 @@
 title: StringIO
 date: 2017-03-03 23:25:42
 categories:
-- 走在写码的路上
+  - 走在写码的路上
 tags:
-- Python
+  - Python
 ---
 
 开发环境

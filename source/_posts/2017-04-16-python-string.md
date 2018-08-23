@@ -2,9 +2,9 @@
 title: Python 字符编码
 date: 2017-04-16 00:00:00
 categories:
-- 走在写码的路上
+  - 走在写码的路上
 tags:
-- Python
+  - Python
 ---
 
 ## Python 2.x

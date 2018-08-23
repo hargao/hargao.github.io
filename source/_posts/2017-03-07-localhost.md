@@ -2,9 +2,9 @@
 title: '127.0.0.1, 127.0.1.1和 localhost'
 date: 2017-03-07 20:37
 categories:
-- 走在写码的路上
+  - 走在写码的路上
 tags:
-- 假装是个DevOps
+  - 假装是个DevOps
 ---
 
 本文测试环境：
