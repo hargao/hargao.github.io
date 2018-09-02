@@ -122,7 +122,7 @@
 <meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-2.png">
 <meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-3.png">
 <meta property="og:image" content="https://hargao.top/2017/02/07/mysql-index-not-used/explain-4.png">
-<meta property="og:updated_time" content="2018-06-06T13:54:18.806Z">
+<meta property="og:updated_time" content="2018-09-02T09:41:28.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql: CHARSET不一致导致的索引无法命中">
 <meta name="twitter:description" content="原始需求描述 TABLE task,  200w rows     id task_no content created house_code     自增主键 task编码，uni_key 内容 创建时间, datetime house.code, 无外键     TABLE house, 160w rows     id code name created     自增主键 house编码，u">
@@ -494,7 +494,10 @@
 <p>run 一下 <strong>taking 1.5ms</strong></p>
 <p>既然这么快， 问题 2 就没有必要了</p>
 <h3 id="收工"><a href="#收工" class="headerlink" title="收工"></a>收工</h3><p><a href="http://stackoverflow.com/questions/18660252/mysql-why-does-left-join-not-use-an-index" target="_blank" rel="noopener">收工之前， 多谢这位大哥</a><br>刚搜到的时候, 信心满满, “我们肯定不会犯这种错误”<br>打脸了</p>
-<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>给同事演示, 发现主表<code>utf8</code> join <code>utf8mb4</code>可用索引， 反之则不行。<br>用STRAIGHT_JOIN指定join顺序。<br>同一个类型， 长度不同不影响使用索引。<br><a href="https://github.com/Yhzhtk/note/issues/43" target="_blank" rel="noopener">更多参考</a></p>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>给同事演示, 发现主表<code>utf8</code> join <code>utf8mb4</code>可用索引， 反之则不行。<br>用STRAIGHT_JOIN指定join顺序。<br>同一个类型， 长度不同不影响使用索引。</p>
+<h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>以后所有项目统统给我用 <code>utf8mb4</code>, <code>utf8mb4_unicode_ci</code></p>
+<hr>
+<p>更多参考:<br><a href="https://github.com/Yhzhtk/note/issues/43" target="_blank" rel="noopener">Innodb 不同编码集、类型、长度的表，join 时能否用上索引？</a></p>
 
       
     </div>
@@ -725,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始需求描述"><span class="nav-number">1.</span> <span class="nav-text">原始需求描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL写的烂"><span class="nav-number">2.</span> <span class="nav-text">SQL写的烂?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试理解"><span class="nav-number">3.</span> <span class="nav-text">尝试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引为什么用不上"><span class="nav-number">4.</span> <span class="nav-text">索引为什么用不上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收工"><span class="nav-number">5.</span> <span class="nav-text">收工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">6.</span> <span class="nav-text">后续</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原始需求描述"><span class="nav-number">1.</span> <span class="nav-text">原始需求描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL写的烂"><span class="nav-number">2.</span> <span class="nav-text">SQL写的烂?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试理解"><span class="nav-number">3.</span> <span class="nav-text">尝试理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引为什么用不上"><span class="nav-number">4.</span> <span class="nav-text">索引为什么用不上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#收工"><span class="nav-number">5.</span> <span class="nav-text">收工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后续"><span class="nav-number">6.</span> <span class="nav-text">后续</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#心得"><span class="nav-number">7.</span> <span class="nav-text">心得</span></a></li></ol></div>
             
 
           </div>
