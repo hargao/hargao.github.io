@@ -38,7 +38,7 @@ mysql> SELECT @@GLOBAL.tx_isolation, @@tx_isolation;
 
 一旦开始了事务, 并且读取了某一些数据, 不受其余事务对它们做的变更(update, insert, delete)影响. 还是能够重复读取这些数据。
 但是仅限于 Selects， 对于 DML 它的表现和 READ COMMITTED 一样: 事务中Update后, 重新Select会读到update的数据在其他事务做的变更
-问题: 幻读
+问题: 幻读(Phantom Read)
 ```
 mysql> select nickname from staff where id=1000026;
 +-------------+
@@ -144,6 +144,10 @@ mysql> select * from repeatable_read_copy;
 2 rows in set (0.00 sec)
 ```
 
+#### InnoDB 的 REPEATABLE READ 避免了幻读?
+
+没有. 给了个`FOR UPDATE`, 用户自己选择性使用
+
 ### SERIALIZABLE
 
 ```mysql
@@ -171,3 +175,8 @@ mysql> SELECT * FROM information_schema.INNODB_TRX;
 +-----------------+-----------+---------------------+-----------------------+------------------+------------+---------------------+---------------------------------------------+---------------------+-------------------+-------------------+------------------+-----------------------+-----------------+-------------------+-------------------------+---------------------+-------------------+------------------------+----------------------------+---------------------------+---------------------------+------------------+----------------------------+
 1 row in set (0.00 sec)
 ```
+
+-------
+References:
+[Understanding MySQL Isolation Levels: Repeatable-Read](https://blog.pythian.com/understanding-mysql-isolation-levels-repeatable-read/)
+[MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/innodb-transaction-isolation-levels.html#isolevel_serializable)

@@ -102,4 +102,11 @@ run 一下 **taking 1.5ms**
 给同事演示, 发现主表`utf8` join `utf8mb4`可用索引， 反之则不行。
 用STRAIGHT_JOIN指定join顺序。
 同一个类型， 长度不同不影响使用索引。
-[更多参考](https://github.com/Yhzhtk/note/issues/43)
+
+### 心得
+
+以后所有项目统统给我用 `utf8mb4`, `utf8mb4_unicode_ci`
+
+-------
+更多参考:
+[Innodb 不同编码集、类型、长度的表，join 时能否用上索引？](https://github.com/Yhzhtk/note/issues/43)
