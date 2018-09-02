@@ -6,7 +6,10 @@ categories:
   - 走在写码的路上
 date: 2018-08-24 00:11:31
 ---
+
 ## 继承
+
+<!-- more -->
 
 ```python
 class Init(object):
@@ -22,7 +25,6 @@ class Add2(Init):
         super(Add2, self).__init__(val)
         self.val += 2
         print self.val
-
 
 class Mul5(Init):
     def __init__(self, val):
