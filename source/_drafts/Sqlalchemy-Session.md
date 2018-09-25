@@ -6,7 +6,7 @@ tags:
 - session.remove()
 
 
-- https://github.com/Vankeservice/Gemini/blob/master/tests/views/conftest.py
+- Gemini master/tests/views/conftest.py
 ```python
 # -*- coding: utf-8 -*-
 
